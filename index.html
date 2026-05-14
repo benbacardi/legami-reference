@@ -130,35 +130,35 @@
 
                                 <template x-if="pen.multipack">
                                     <p class="note">
-                                        <i class="fas fa-fw fa-border-all"></i>
+                                        <i class="fas fa-fw fa-border-all" x-tooltip="'Multipack'"></i>
                                         <span x-text="pen.multipack.name"></span>
                                     </p>
                                 </template>
 
                                 <template x-if="pen.multipack && pen.multipack.event">
                                     <p class="note">
-                                        <i class="fas fa-fw fa-champagne-glasses"></i>
+                                        <i class="fas fa-fw fa-champagne-glasses" x-tooltip="'Event'"></i>
                                         <span x-text="pen.multipack.event.name"></span>
                                     </p>
                                 </template>
 
                                 <template x-if="pen.event">
                                     <p class="note">
-                                        <i class="fas fa-fw fa-champagne-glasses"></i>
+                                        <i class="fas fa-fw fa-champagne-glasses" x-tooltip="'Event'"></i>
                                         <span x-text="pen.event.name"></span>
                                     </p>
                                 </template>
 
                                 <template x-if="pen.multipack && pen.multipack.year">
                                     <p class="note">
-                                        <i class="far fa-fw fa-calendar"></i>
+                                        <i class="far fa-fw fa-calendar" x-tooltip="'Release Year'"></i>
                                         <span x-text="pen.multipack.year"></span>
                                     </p>
                                 </template>
 
                                 <template x-if="pen.year">
                                     <p class="note">
-                                        <i class="far fa-fw fa-calendar"></i>
+                                        <i class="far fa-fw fa-calendar" x-tooltip="'Release Year'"></i>
                                         <span x-text="pen.year"></span>
                                     </p>
                                 </template>
