@@ -112,12 +112,6 @@ label {
     grid-column: span 2;
 }
 
-@media (max-width: 800px) {
-    .characters {
-        grid-column: span 1;
-    }
-}
-
 .color,
 .character {
     height: 30px;
@@ -242,4 +236,14 @@ label {
 .reset-filters {
     margin-right: 0;
     margin-bottom: 0;
+}
+
+@media (max-width: 800px) {
+    body {
+        padding: 1rem;
+    }
+
+    .characters {
+        grid-column: span 1;
+    }
 }
