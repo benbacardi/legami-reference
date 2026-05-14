@@ -227,7 +227,7 @@ const pens = [
     { character: characters.ELF, color: colors.GREEN, type: types.ERASABLE, multipack: multipacks.NAUGHTY_OR_NICE },
     { character: characters.REINDEER, color: colors.BLUE, type: types.ERASABLE, multipack: multipacks.NAUGHTY_OR_NICE },
     { character: characters.SANTA, color: colors.RED, type: types.ERASABLE, multipack: multipacks.NAUGHTY_OR_NICE },
-    { character: characters.SANTA_BLUE_PEN, color: null, type: types.ERASABLE, event: events.CHRISTMAS },
+    { character: characters.SANTA_BLUE_PEN, color: colors.BLACK, type: types.ERASABLE, event: events.CHRISTMAS, year: 2024 },
     { character: characters.TURTLE, color: colors.TURQUOISE, type: types.ERASABLE, multipack: multipacks.UNDER_THE_SEA },
     { character: characters.CLOWN_FISH, color: colors.BLACK, type: types.ERASABLE, multipack: multipacks.UNDER_THE_SEA },
     { character: characters.SEAHORSE, color: colors.PURPLE, type: types.ERASABLE, multipack: multipacks.UNDER_THE_SEA },
