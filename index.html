@@ -26,7 +26,10 @@
     <link rel="stylesheet" href="fa/css/all.min.css">
 
     <script src="js/legami.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@ryangjchandler/alpine-tooltip@1.x.x/dist/cdn.min.js" defer></script>
     <script src="https://unpkg.com/alpinejs" defer></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/dist/tippy.css" />
 
 </head>
 
@@ -59,7 +62,8 @@
                 <template x-for=" color in colors">
                     <button @click="colorFilter == color.name ? colorFilter = 'all' : colorFilter = color.name"
                         class="color" :class="{'active': colorFilter === color.name}"
-                        :style="'background-color: ' + color.color" :title="color.name">&nbsp;</button>
+                        :style="'background-color: ' + color.color" :title="color.name"
+                        x-tooltip="color.name">&nbsp;</button>
                 </template>
             </div>
 
@@ -88,7 +92,8 @@
                     <button
                         @click="characterFilter == group.characters ? characterFilter = 'all' : characterFilter = group.characters"
                         class="character" :class="{'active': characterFilter === group.characters}" :title="group.name"
-                        :style="'background-image: url(img/' + group.characters[0].image + ')'"></button>
+                        :style="'background-image: url(img/' + group.characters[0].image + ')'"
+                        x-tooltip="group.name"></button>
                 </template>
             </div>
 
@@ -161,7 +166,8 @@
                             </div>
 
                             <template x-if="pen.color">
-                                <svg class="ink" :style="'color: ' + pen.color.color" :title="pen.color.name">
+                                <svg class="ink" :style="'color: ' + pen.color.color" :title="pen.color.name"
+                                    x-tooltip="pen.color.name">
                                     <use href="#ink"></use>
                                 </svg>
                             </template>
