@@ -44,7 +44,12 @@
 
         <div class="filters">
 
-            <div class="types">
+            <div class="filter-header">
+                <button @click="showFilters = !showFilters" class="filter-button toggle-filters"
+                    title="Toggle filters"><span x-text="showFilters ? 'Hide' : 'Show'"> </span> Filters</button>
+            </div>
+
+            <div x-show="showFilters" x-transition.scale.origin.top class="types">
                 <label>Browse by type</label>
                 <!--<button @click="typeFilter = 'all'" class="type" title="All" :class="{'active': typeFilter === 'all'}"
                     style="--local-color: var(--orange)">All</button>-->
@@ -55,7 +60,7 @@
                 </template>
             </div>
 
-            <div class="colors">
+            <div x-show="showFilters" x-transition.scale.origin.top class="colors">
                 <label>Browse by ink</label>
                 <!--<button @click="colorFilter = 'all'" class="color" title="All"
                     style="background-image: conic-gradient(red, yellow, lime, aqua, blue, magenta, red);"">&nbsp;</button>-->
@@ -67,7 +72,7 @@
                 </template>
             </div>
 
-            <div class="types">
+            <div x-show="showFilters" x-transition.scale.origin.top class="types">
                 <label>Browse by event</label>
                 <template x-for="event in events">
                     <button @click="eventFilter == event.name ? eventFilter = 'all' : eventFilter = event.name"
@@ -76,7 +81,7 @@
                 </template>
             </div>
 
-            <div class="types">
+            <div x-show="showFilters" x-transition.scale.origin.top class="types">
                 <label>Browse by pack</label>
                 <button @click="packFilter == 'individual' ? packFilter = 'all' : packFilter = 'individual'"
                     class="type" :class="{'active': packFilter === 'individual'}" :title="'Individual'"
@@ -86,7 +91,7 @@
                     style="--local-color: var(--orange)">Multipack</button>
             </div>
 
-            <div class="characters">
+            <div x-show="showFilters" x-transition.scale.origin.top class="characters">
                 <label>Browse by character</label>
                 <template x-for="group in characterGroups">
                     <button
@@ -262,6 +267,7 @@
                 eventFilter: 'all',
                 packFilter: 'all',
 
+                showFilters: true,
                 showImages: true,
 
                 pens: pens,

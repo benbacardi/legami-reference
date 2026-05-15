@@ -106,7 +106,16 @@ a:hover {
     padding: 1rem;
 }
 
+.filter-header {
+    display: none;
+}
+
 @media (max-width: 600px) {
+
+    .filter-header {
+        display: block;
+    }
+
     .penHeader {
         display: grid;
         grid-template-columns: 1fr 1fr;
