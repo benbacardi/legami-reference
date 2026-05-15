@@ -223,6 +223,7 @@ const pens = [
     { character: characters.NUTCRACKER, color: colors.BLUE, type: types.ERASABLE, multipack: multipacks.NUTCRACKER },
     { character: characters.BALLERINA, color: colors.GREEN, type: types.ERASABLE, multipack: multipacks.NUTCRACKER },
     { character: characters.MOUSE, color: colors.RED, type: types.ERASABLE, multipack: multipacks.NUTCRACKER },
+    { character: characters.BEAR, color: colors.RED, type: types.ERASABLE, event: events.CHRISTMAS, year: 2025, notes: "Advent calendar" },
     { character: characters.ZOMBIE, color: colors.BLACK, type: types.ERASABLE, multipack: multipacks.BOO_CREW_1 },
     { character: characters.HALLOWEEN_CAT, color: colors.PURPLE, type: types.ERASABLE, multipack: multipacks.BOO_CREW_1 },
     { character: characters.HALLOWEEN_SKELETON, color: colors.ORANGE, type: types.ERASABLE, multipack: multipacks.BOO_CREW_1 },
@@ -238,6 +239,7 @@ const pens = [
     { character: characters.REINDEER, color: colors.BLUE, type: types.ERASABLE, multipack: multipacks.NAUGHTY_OR_NICE },
     { character: characters.SANTA, color: colors.RED, type: types.ERASABLE, multipack: multipacks.NAUGHTY_OR_NICE },
     { character: characters.SANTA, color: colors.BLACK, type: types.ERASABLE, event: events.CHRISTMAS, year: 2024, notes: "Blue pen, available separately to the Naughty or Nice multipack" },
+    { character: characters.YETI, color: colors.BLUE, type: types.ERASABLE, event: events.CHRISTMAS, year: 2024, notes: "Advent calendar" },
     { character: characters.BAT, color: colors.BLACK, type: types.ERASABLE, multipack: multipacks.BOO_CREW_2 },
     { character: characters.WITCH, color: colors.PURPLE, type: types.ERASABLE, multipack: multipacks.BOO_CREW_2 },
     { character: characters.VAMPIRE, color: colors.RED, type: types.ERASABLE, multipack: multipacks.BOO_CREW_2 },
@@ -262,8 +264,6 @@ const pens = [
     { character: characters.KOALA_CHRISTMAS, color: colors.BLUE, type: types.ERASABLE, event: events.CHRISTMAS, year: 2022 },
     { character: characters.BEAR_CHRISTMAS, color: colors.RED, type: types.ERASABLE, event: events.CHRISTMAS, year: 2022 },
     { character: characters.PANDA_CHRISTMAS, color: colors.BLACK, type: types.ERASABLE, event: events.CHRISTMAS, year: 2022 },
-    { character: characters.BEAR, color: colors.RED, type: types.ERASABLE, event: events.CHRISTMAS, year: 2025 },
-    { character: characters.YETI, color: colors.BLUE, type: types.ERASABLE, event: events.CHRISTMAS, year: 2024 },
 
     // Discontinued
     { character: characters.LION_1, color: colors.BLACK, type: types.FRIENDS, year: 2023, discontinued: 2025 },
