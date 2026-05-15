@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="css/style.css?v=5">
     <link rel="stylesheet" href="fa/css/all.min.css">
 
-    <script src="js/legami.js?v=4"></script>
+    <script src="js/legami.js?v=5"></script>
     <script src="https://cdn.jsdelivr.net/npm/@ryangjchandler/alpine-tooltip@1.x.x/dist/cdn.min.js" defer></script>
     <script src="https://unpkg.com/alpinejs" defer></script>
 
@@ -51,22 +51,21 @@
 
             <div x-show="showFilters" x-transition.scale.origin.top class="types">
                 <label>Browse by type</label>
-                <!--<button @click="typeFilter = 'all'" class="type" title="All" :class="{'active': typeFilter === 'all'}"
-                    style="--local-color: var(--orange)">All</button>-->
                 <template x-for="type in types">
-                    <button @click="typeFilter == type.code ? typeFilter = 'all' : typeFilter = type.code" class="type"
-                        :class="{'active': typeFilter === type.code}" :title="type.name"
+                    <button @click="params.type == type.code ? params.type = 'all' : params.type = type.code"
+                        class="type" :class="{'active': params.type === type.code}" :title="type.name"
                         :style="'--local-color: ' + type.color" x-text="type.name"></button>
                 </template>
             </div>
 
             <div x-show="showFilters" x-transition.scale.origin.top class="colors">
                 <label>Browse by ink</label>
-                <!--<button @click="colorFilter = 'all'" class="color" title="All"
+                <!--<button @click="params.color = 'all'" class="color" title="All"
                     style="background-image: conic-gradient(red, yellow, lime, aqua, blue, magenta, red);"">&nbsp;</button>-->
                 <template x-for=" color in colors">
-                    <button @click="colorFilter == color.name ? colorFilter = 'all' : colorFilter = color.name"
-                        class="color" :class="{'active': colorFilter === color.name, 'metallic': color.metallic}"
+                    <button @click="params.color == color.name ? params.color = 'all' : params.color = color.name"
+                        class="color"
+                        :class="{'active': params.color.toLowerCase() === color.name.toLowerCase(), 'metallic': color.metallic}"
                         :style="'background-color: ' + color.color" :title="color.name"
                         x-tooltip="color.name">&nbsp;</button>
                 </template>
@@ -75,19 +74,19 @@
             <div x-show="showFilters" x-transition.scale.origin.top class="types">
                 <label>Browse by event</label>
                 <template x-for="event in events">
-                    <button @click="eventFilter == event.name ? eventFilter = 'all' : eventFilter = event.name"
-                        class="type" :class="{'active': eventFilter === event.name}" :title="event.name"
+                    <button @click="params.event == event.name ? params.event = 'all' : params.event = event.name"
+                        class="type" :class="{'active': params.event === event.name}" :title="event.name"
                         x-text="event.name" style="--local-color: var(--orange)"></button>
                 </template>
             </div>
 
             <div x-show="showFilters" x-transition.scale.origin.top class="types">
                 <label>Browse by pack</label>
-                <button @click="packFilter == 'individual' ? packFilter = 'all' : packFilter = 'individual'"
-                    class="type" :class="{'active': packFilter === 'individual'}" :title="'Individual'"
+                <button @click="params.pack == 'individual' ? params.pack = 'all' : params.pack = 'individual'"
+                    class="type" :class="{'active': params.pack === 'individual'}" :title="'Individual'"
                     style="--local-color: var(--orange)">Individual</button>
-                <button @click="packFilter == 'multi' ? packFilter = 'all' : packFilter = 'multi'" class="type"
-                    :class="{'active': packFilter === 'multi'}" :title="'Multipack'"
+                <button @click="params.pack == 'multi' ? params.pack = 'all' : params.pack = 'multi'" class="type"
+                    :class="{'active': params.pack === 'multi'}" :title="'Multipack'"
                     style="--local-color: var(--orange)">Multipack</button>
             </div>
 
@@ -95,8 +94,8 @@
                 <label>Browse by character</label>
                 <template x-for="group in characterGroups">
                     <button
-                        @click="characterFilter == group.characters ? characterFilter = 'all' : characterFilter = group.characters"
-                        class="character" :class="{'active': characterFilter === group.characters}" :title="group.name"
+                        @click="params.character == group.name ? params.character = 'all' : params.character = group.name"
+                        class="character" :class="{'active': params.character === group.name}" :title="group.name"
                         :style="'background-image: url(img/' + group.characters[0].image + ')'"
                         x-tooltip="group.name"></button>
                 </template>
@@ -107,45 +106,44 @@
         <div class="penHeader">
             <h2><span x-text="filteredPens.length"></span> Pen<span x-show="filteredPens.length !== 1">s</span></h2>
             <div class="chosen-filters">
-                <span x-show="characterFilter !== 'all'">
+                <span x-show="params.character !== 'all'">
                     <template x-for="group in characterGroups">
-                        <span x-show="characterFilter == group.characters" class="types">
+                        <span x-show="params.character == group.name" class="types">
                             <button class="character active"
                                 :style="'background-image: url(img/' + group.characters[0].image + ')'"
                                 :title="group.name" x-tooltip="group.name">&nbsp;</button>
                         </span>
                     </template>
                 </span>
-                <span x-show="colorFilter !== 'all'">
+                <span x-show="params.color !== 'all'">
                     <template x-for="color in colors">
-                        <span x-show="colorFilter == color.name">
+                        <span x-show="params.color.toLowerCase() == color.name.toLowerCase()">
                             <button class="color active" :class="{'metallic': color.metallic}"
                                 :style="'background-color: ' + color.color" :title="color.name"
                                 x-tooltip="color.name">&nbsp;</button>
                         </span>
                     </template>
                 </span>
-                <span x-show="typeFilter !== 'all'">
+                <span x-show="params.type !== 'all'">
                     <template x-for="type in types">
-                        <span x-show="typeFilter == type.code" class="types">
+                        <span x-show="params.type == type.code" class="types">
                             <span class="type active" :style="'--local-color: ' + type.color" :title="type.name"
                                 x-text="type.name"></span>
-                            <span x-text="color.name + ' Ink'"></span>
                         </span>
                     </template>
                 </span>
-                <span x-show="eventFilter !== 'all'">
+                <span x-show="params.event !== 'all'">
                     <template x-for="event in events">
-                        <span x-show="eventFilter == event.name" class="types">
+                        <span x-show="params.event == event.name" class="types">
                             <span class="type active" :title="event.name" x-text="event.name" x-tooltip="event.name"
                                 style="--local-color: var(--orange)"></span>
                         </span>
                     </template>
                 </span>
-                <span x-show="packFilter !== 'all'" class="types">
-                    <span x-show="packFilter == 'individual'" class="type active" title="Individual"
+                <span x-show="params.pack !== 'all'" class="types">
+                    <span x-show="params.pack == 'individual'" class="type active" title="Individual"
                         style="--local-color: var(--orange)">Individual</span>
-                    <span x-show="packFilter == 'multi'" class="type active" title="Multipack"
+                    <span x-show="params.pack == 'multi'" class="type active" title="Multipack"
                         style="--local-color: var(--orange)">Multipack</span>
                 </span>
             </div>
@@ -261,11 +259,14 @@
 
         document.addEventListener('alpine:init', () => {
             Alpine.data('penData', () => ({
-                colorFilter: 'all',
-                typeFilter: 'all',
-                characterFilter: 'all',
-                eventFilter: 'all',
-                packFilter: 'all',
+
+                params: {
+                    'color': 'all',
+                    'type': 'all',
+                    'character': 'all',
+                    'event': 'all',
+                    'pack': 'all',
+                },
 
                 showFilters: true,
                 showImages: true,
@@ -333,41 +334,71 @@
                     return result;
                 },
 
+                init() {
+                    const urlParams = new URLSearchParams(window.location.search);
+                    for (const key in this.params) {
+                        if (urlParams.has(key)) {
+                            this.params[key] = urlParams.get(key);
+                        }
+                    }
+                    this.$watch('params', () => this.updateUrl(), { deep: true });
+                },
+
+                updateUrl() {
+                    const url = new URL(window.location.href);
+                    for (const [key, value] of Object.entries(this.params)) {
+                        if (value != 'all') {
+                            url.searchParams.set(key, value);
+                        } else {
+                            url.searchParams.delete(key);
+                        }
+                    }
+                    window.history.replaceState({}, '', url);
+                },
+
+                getCharacterGroup(name) {
+                    return Object.values(this.characterGroups).filter(group => group.name === name)[0];
+                },
+
                 resetFilters() {
-                    this.colorFilter = 'all';
-                    this.typeFilter = 'all';
-                    this.characterFilter = 'all';
-                    this.eventFilter = 'all';
-                    this.packFilter = 'all';
+                    this.params = {
+                        'color': 'all',
+                        'type': 'all',
+                        'character': 'all',
+                        'event': 'all',
+                        'pack': 'all',
+                    }
+                    window.history.replaceState({}, '', window.location.pathname);
                 },
 
                 get filteredPens() {
                     var pens = this.pens;
-                    if (this.colorFilter !== 'all') {
-                        pens = pens.filter(pen => pen.color).filter(pen => pen.color.name === this.colorFilter)
+                    if (this.params.color !== 'all') {
+                        pens = pens.filter(pen => pen.color).filter(pen => pen.color.name.toLowerCase() === this.params.color.toLowerCase())
                     }
-                    if (this.typeFilter !== 'all') {
-                        pens = pens.filter(pen => pen.type.code === this.typeFilter)
+                    if (this.params.type !== 'all') {
+                        pens = pens.filter(pen => pen.type.code === this.params.type)
                     }
-                    if (this.characterFilter !== 'all') {
-                        pens = pens.filter(pen => pen.character).filter(pen => this.characterFilter.includes(pen.character))
+                    if (this.params.character !== 'all') {
+                        const group = this.getCharacterGroup(this.params.character);
+                        pens = pens.filter(pen => pen.character).filter(pen => group.characters.includes(pen.character))
                     }
-                    if (this.eventFilter !== 'all') {
+                    if (this.params.event !== 'all') {
                         pens = pens.filter(pen => {
-                            if (pen.event && pen.event.name === this.eventFilter) {
+                            if (pen.event && pen.event.name === this.params.event) {
                                 return pen;
                             }
-                            if (pen.multipack && pen.multipack.event && pen.multipack.event.name === this.eventFilter) {
+                            if (pen.multipack && pen.multipack.event && pen.multipack.event.name === this.params.event) {
                                 return pen;
                             }
                         });
                     }
-                    if (this.packFilter !== 'all') {
+                    if (this.params.pack !== 'all') {
                         pens = pens.filter(pen => {
-                            if (this.packFilter === 'individual' && (!pen.multipack || pen.individual)) {
+                            if (this.params.pack === 'individual' && (!pen.multipack || pen.individual)) {
                                 return pen;
                             }
-                            if (this.packFilter === 'multi' && pen.multipack) {
+                            if (this.params.pack === 'multi' && pen.multipack) {
                                 return pen;
                             }
                         });
