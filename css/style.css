@@ -72,8 +72,27 @@ a:hover {
 .penHeader {
     display: flex;
     justify-content: space-between;
-    align-items: end;
+    align-items: center;
+    gap: 0.5rem;
     margin-top: 1rem;
+}
+
+.penHeader .character,
+.penHeader .color,
+.penHeader .types .type {
+    margin: 0;
+    cursor: default;
+}
+
+.penHeader h2 {
+    margin-right: 0.5rem;
+}
+
+.penHeader .chosen-filters {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    flex-grow: 1;
 }
 
 .filters {
@@ -85,6 +104,31 @@ a:hover {
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     padding: 1rem;
+}
+
+@media (max-width: 600px) {
+    .penHeader {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .penHeader h2 {
+        margin: 0;
+    }
+
+    .penHeader .chosen-filters {
+        grid-column: span 2;
+    }
+
+    .penHeader .filter-button {
+        margin: 0;
+        grid-row: 1;
+        grid-column: 2;
+    }
+
+    .penHeader .filter-button.show-images {
+        grid-row: 2;
+    }
 }
 
 label {
@@ -158,6 +202,14 @@ label {
     grid-template-columns: repeat(var(--grid-columns), 1fr);
     gap: 1.2rem;
     margin-top: 1rem;
+}
+
+.no-results {
+    text-align: center;
+    font-size: 1rem;
+    opacity: 0.8;
+    padding: 2rem;
+    grid-column: span var(--grid-columns);
 }
 
 @media (max-width: 1000px) {
@@ -290,7 +342,6 @@ label {
 .filter-button {
     margin-right: 0;
     margin-bottom: 0;
-    margin-left: 1rem;
 }
 
 @media (max-width: 800px) {

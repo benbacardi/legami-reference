@@ -22,10 +22,10 @@
     <meta name="author" content="Ben Cardy">
 
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css?v=3">
+    <link rel="stylesheet" href="css/style.css?v=4">
     <link rel="stylesheet" href="fa/css/all.min.css">
 
-    <script src="js/legami.js?v=3"></script>
+    <script src="js/legami.js?v=4"></script>
     <script src="https://cdn.jsdelivr.net/npm/@ryangjchandler/alpine-tooltip@1.x.x/dist/cdn.min.js" defer></script>
     <script src="https://unpkg.com/alpinejs" defer></script>
 
@@ -101,10 +101,53 @@
 
         <div class="penHeader">
             <h2><span x-text="filteredPens.length"></span> Pen<span x-show="filteredPens.length !== 1">s</span></h2>
-            <button @click="showImages = !showImages" class="filter-button" title="Toggle pen images"
-                style="margin-left: auto"><span x-text="showImages ? 'Hide' : 'Show'"> </span> Large
+            <div class="chosen-filters">
+                <span x-show="characterFilter !== 'all'">
+                    <template x-for="group in characterGroups">
+                        <span x-show="characterFilter == group.characters" class="types">
+                            <button class="character active"
+                                :style="'background-image: url(img/' + group.characters[0].image + ')'"
+                                :title="group.name" x-tooltip="group.name">&nbsp;</button>
+                        </span>
+                    </template>
+                </span>
+                <span x-show="colorFilter !== 'all'">
+                    <template x-for="color in colors">
+                        <span x-show="colorFilter == color.name">
+                            <button class="color active" :class="{'metallic': color.metallic}"
+                                :style="'background-color: ' + color.color" :title="color.name"
+                                x-tooltip="color.name">&nbsp;</button>
+                        </span>
+                    </template>
+                </span>
+                <span x-show="typeFilter !== 'all'">
+                    <template x-for="type in types">
+                        <span x-show="typeFilter == type.code" class="types">
+                            <span class="type active" :style="'--local-color: ' + type.color" :title="type.name"
+                                x-text="type.name"></span>
+                            <span x-text="color.name + ' Ink'"></span>
+                        </span>
+                    </template>
+                </span>
+                <span x-show="eventFilter !== 'all'">
+                    <template x-for="event in events">
+                        <span x-show="eventFilter == event.name" class="types">
+                            <span class="type active" :title="event.name" x-text="event.name" x-tooltip="event.name"
+                                style="--local-color: var(--orange)"></span>
+                        </span>
+                    </template>
+                </span>
+                <span x-show="packFilter !== 'all'" class="types">
+                    <span x-show="packFilter == 'individual'" class="type active" title="Individual"
+                        style="--local-color: var(--orange)">Individual</span>
+                    <span x-show="packFilter == 'multi'" class="type active" title="Multipack"
+                        style="--local-color: var(--orange)">Multipack</span>
+                </span>
+            </div>
+            <button @click="showImages = !showImages" class="filter-button show-images" title="Toggle pen images"><span
+                    x-text="showImages ? 'Hide' : 'Show'"> </span> Large
                 Images</button>
-            <button @click="resetFilters" class="filter-button" title="Reset filters">Reset
+            <button @click="resetFilters" class="filter-button reset-filters" title="Reset filters">Reset
                 Filters</button>
         </div>
 
