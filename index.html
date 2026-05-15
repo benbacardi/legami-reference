@@ -22,10 +22,10 @@
     <meta name="author" content="Ben Cardy">
 
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=2">
     <link rel="stylesheet" href="fa/css/all.min.css">
 
-    <script src="js/legami.js"></script>
+    <script src="js/legami.js?v=2"></script>
     <script src="https://cdn.jsdelivr.net/npm/@ryangjchandler/alpine-tooltip@1.x.x/dist/cdn.min.js" defer></script>
     <script src="https://unpkg.com/alpinejs" defer></script>
 
@@ -61,7 +61,7 @@
                     style="background-image: conic-gradient(red, yellow, lime, aqua, blue, magenta, red);"">&nbsp;</button>-->
                 <template x-for=" color in colors">
                     <button @click="colorFilter == color.name ? colorFilter = 'all' : colorFilter = color.name"
-                        class="color" :class="{'active': colorFilter === color.name}"
+                        class="color" :class="{'active': colorFilter === color.name, 'metallic': color.metallic}"
                         :style="'background-color: ' + color.color" :title="color.name"
                         x-tooltip="color.name">&nbsp;</button>
                 </template>
@@ -100,8 +100,9 @@
         </div>
 
         <div class="penHeader">
-            <h2><span x-text="filteredPens.length"></span> Pens</h2>
-            <button @click="resetFilters" class="reset-filters" title="Reset filters">Reset Filters</button>
+            <h2><span x-text="filteredPens.length"></span> Pen<span x-show="filteredPens.length !== 1">s</span></h2>
+            <button @click="resetFilters" class="reset-filters" title="Reset filters" style="margin-left: auto">Reset
+                Filters</button>
         </div>
 
         <div id="penGrid">
@@ -111,12 +112,18 @@
             </template>
 
             <template x-for="pen in filteredPens">
-                <div class="card" :class="{'discontinued': pen.discontinued}">
+                <div class="card" :class="{'discontinued': !penIsAvailable(pen)}">
+                    <div class="card-ribbon" x-show="!penIsAvailable(pen)">Discontinued</div>
                     <div class="card-content">
                         <div class="card-header">
                             <div>
                                 <strong class="name" x-text="pen.character.name"></strong>
-                                <div class="statement" x-text="pen.character.statement"></div>
+                                <div class="statement">
+                                    <template x-if="pen.notes">
+                                        <i class="fas fa-info-circle" x-tooltip="pen.notes"></i>
+                                    </template>
+                                    <span x-text="pen.character.statement"></span>
+                                </div>
                             </div>
                             <template x-if="pen.character.image">
                                 <img :src="'img/' + pen.character.image" :alt="pen.character.name"
@@ -129,9 +136,18 @@
                             <div class="notes">
 
                                 <template x-if="pen.multipack">
-                                    <p class="note">
-                                        <i class="fas fa-fw fa-border-all" x-tooltip="'Multipack'"></i>
+                                    <p class="note"
+                                        :class="{'discontinued': pen.multipack.discontinued && penIsAvailable(pen)}">
+                                        <i class="fas fa-fw fa-border-all"
+                                            x-tooltip="'Multipack' + (pen.multipack.discontinued && penIsAvailable(pen) ? ' (Discontinued)' : '')"></i>
                                         <span x-text="pen.multipack.name"></span>
+                                    </p>
+                                </template>
+
+                                <template x-if="penAvailableYears(pen)">
+                                    <p class="note">
+                                        <i class="far fa-fw fa-calendar" x-tooltip="'Year'"></i>
+                                        <span x-text="penAvailableYears(pen)"></span>
                                     </p>
                                 </template>
 
@@ -146,20 +162,6 @@
                                     <p class="note">
                                         <i class="fas fa-fw fa-champagne-glasses" x-tooltip="'Event'"></i>
                                         <span x-text="pen.event.name"></span>
-                                    </p>
-                                </template>
-
-                                <template x-if="pen.multipack && pen.multipack.year">
-                                    <p class="note">
-                                        <i class="far fa-fw fa-calendar" x-tooltip="'Release Year'"></i>
-                                        <span x-text="pen.multipack.year"></span>
-                                    </p>
-                                </template>
-
-                                <template x-if="pen.year">
-                                    <p class="note">
-                                        <i class="far fa-fw fa-calendar" x-tooltip="'Release Year'"></i>
-                                        <span x-text="pen.year"></span>
                                     </p>
                                 </template>
 
@@ -198,6 +200,8 @@
 
     <script>
 
+        const CURRENT_YEAR = new Date().getFullYear();
+
         document.addEventListener('alpine:init', () => {
             Alpine.data('penData', () => ({
                 colorFilter: 'all',
@@ -212,6 +216,64 @@
                 characters: characters,
                 characterGroups: characterGroups,
                 events: events,
+
+                penIsAvailable(pen) {
+                    if (pen.individual || !pen.multipack) {
+                        if (pen.discontinued) {
+                            return false
+                        }
+                        if (pen.event && pen.year && pen.year != CURRENT_YEAR) {
+                            return false;
+                        }
+                    } else {
+                        if (pen.multipack && pen.multipack.discontinued) {
+                            return false;
+                        }
+                        if (pen.multipack && pen.multipack.event && pen.multipack.year != CURRENT_YEAR) {
+                            console.log("Comparing " + pen.multipack.event.year + " to " + CURRENT_YEAR)
+                            return false;
+                        }
+                    }
+                    return true;
+                },
+
+                penAvailableYears(pen) {
+                    var result = ""
+
+                    if (pen.individual || !pen.multipack) {
+                        if (pen.year || (pen.multipack && pen.multipack.year)) {
+                            result = pen.year ? pen.year : pen.multipack.year
+                        }
+                        if (pen.discontinued) {
+                            result += "–" + pen.discontinued;
+                        }
+                    } else {
+                        if (pen.multipack && pen.multipack.year) {
+                            result = pen.multipack.year;
+                            if (pen.multipack.discontinued) {
+                                result += "–" + pen.multipack.discontinued;
+                            }
+                        }
+                    }
+
+                    return result
+
+                    if (pen.individual || !pen.multipack) {
+                        console.log("Pen has year " + pen.year)
+                        if (pen.year) {
+                            result += pen.year;
+                        }
+                        if (pen.discontinued) {
+                            result += "–" + pen.discontinued;
+                        }
+                    } else if (pen.multipack && pen.multipack.year) {
+                        result += pen.multipack.year;
+                        if (pen.multipack.discontinued) {
+                            result += "–" + pen.multipack.discontinued;
+                        }
+                    }
+                    return result;
+                },
 
                 resetFilters() {
                     this.colorFilter = 'all';
