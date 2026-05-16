@@ -177,7 +177,7 @@ const pens = [
     { character: characters.HIPPO, color: colors.BLUE, type: types.FRIENDS, image: "friends-hippo.webp" },
     { character: characters.KITTY, color: colors.PINK, type: types.FRIENDS, image: "friends-kitty.webp" },
     { character: characters.KOALA_1, color: colors.GREEN, type: types.FRIENDS, image: "friends-koala.webp" },
-    { character: characters.LADYBUG, color: colors.RED, type: types.FRIENDS, image: "friends-ladybug.webp" },
+    { character: characters.LADYBUG, color: colors.RED, type: types.FRIENDS, year: 2026, image: "friends-ladybug.webp" },
     { character: characters.LION_1, color: colors.BLACK, type: types.FRIENDS, year: 2023, image: "friends-lion.webp" },
     { character: characters.LLAMA, color: colors.TURQUOISE, type: types.FRIENDS, image: "friends-llama.webp" },
     { character: characters.MONSTER, color: colors.BLUE, type: types.FRIENDS, image: "friends-monster.webp" },
