@@ -24,8 +24,10 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css?v=5">
     <link rel="stylesheet" href="fa/css/all.min.css">
+    <link rel="stylesheet" href="css/simple-lightbox.min.css">
 
     <script src="js/legami.js?v=5"></script>
+    <script src="js/simple-lightbox.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@ryangjchandler/alpine-tooltip@1.x.x/dist/cdn.min.js" defer></script>
     <script src="https://unpkg.com/alpinejs" defer></script>
 
@@ -217,8 +219,10 @@
                             </div>
 
                             <template x-if="pen.image">
-                                <img :src="'img/big/thumb/' + pen.image" :alt="pen.character.name + ' pen'"
-                                    class="pen-image" x-show="showImages" x-transition>
+                                <a :href="'img/big/' + pen.image" class="pen-image-link">
+                                    <img :src="'img/big/thumb/' + pen.image" :alt="pen.character.name + ' pen'"
+                                        class="pen-image" x-show="showImages" x-transition>
+                                </a>
                             </template>
 
                             <template x-if="pen.color">
@@ -407,6 +411,10 @@
                 }
 
             }))
+        })
+
+        document.addEventListener('alpine:initialized', () => {
+            var lightbox = new SimpleLightbox(".pen-image-link", { captions: false, nav: false, showCounter: false })
         })
 
     </script>
