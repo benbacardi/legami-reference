@@ -73,6 +73,9 @@ const characters = {
     PENGUIN_CHRISTMAS: { name: "Penguin", statement: "Merry & Brrright", image: "penguin.jpg" },
     FOX_CHRISTMAS: { name: "Fox", statement: "Foxtastic Holidays", image: "fox.jpg" },
     POLAR_BEAR_CHRISTMAS: { name: "Polar Bear", statement: "Greetings from the North Pole", image: "polarbear.jpg" },
+    GOLDEN_RETRIEVER: { name: "Golden Retriever", statement: "Fur-ever Friends", image: "retriever.png" },
+    BULLDOG: { name: "Bulldog", statement: "Big Nap Boss", image: "bulldog.png" },
+    POODLE: { name: "Poodle", statement: "Cute? ... Try iconic!", image: "poodle.png" },
 }
 
 const characterGroups = {
@@ -115,7 +118,7 @@ const characterGroups = {
     SEAHORSE: { "name": "Seahorse", characters: [characters.SEAHORSE] },
     ZOMBIE: { "name": "Zombie", characters: [characters.ZOMBIE] },
     HALLOWEEN_SKELETON: { "name": "Skeleton", characters: [characters.HALLOWEEN_SKELETON] },
-    DOG: { "name": "Dog", characters: [characters.DOG] },
+    DOG: { "name": "Dog", characters: [characters.DOG, characters.CORGI, characters.GOLDEN_RETRIEVER, characters.BULLDOG, characters.POODLE] },
     ELEPHANT: { "name": "Elephant", characters: [characters.ELEPHANT] },
     YETI: { "name": "Yeti", characters: [characters.YETI] },
     FRANKENSTEINS_MONSTER: { "name": "Frankenstein's Monster", characters: [characters.FRANKENSTEINS_MONSTER] },
@@ -163,9 +166,10 @@ const multipacks = {
     BOO_CREW_1: { name: "The Boo Crew", event: events.HALLOWEEN, year: 2025 },
     BOO_CREW_2: { name: "The Boo Crew", event: events.HALLOWEEN, year: 2024 },
     BOO_CREW_3: { name: "The Boo Crew", event: events.HALLOWEEN, year: 2023 },
-    FARM: { name: "Farm Sweet Farm", event: null, year: 2025 },
+    FARM: { name: "Farm Sweet Farm", event: null, year: 2025, legamiId: "VEPSET0016" },
     UNDER_THE_SEA: { name: "Under the Sea", event: null, year: 2024, discontinued: 2025 },
     WILD_SAVANNAH: { name: "Wild Savannah", event: null, year: 2023, discontinued: 2025 },
+    FUREVER_FRIENDS: { name: "Fur-ever Friends", event: null, year: 2026, legamiId: "VEPSET0017" },
 }
 
 const pens = [
@@ -199,24 +203,27 @@ const pens = [
     { id: "F021", character: characters.GHOST, color: colors.NEON_GREEN, type: types.FRIENDS, event: events.HALLOWEEN, year: 2024, image: "friends-ghoost.jpg" },
 
     // Erasable
-    { id: "E001", character: characters.PANDA, color: colors.BLACK, type: types.ERASABLE, image: "erasable-panda.webp" },
-    { id: "E002", character: characters.BEE, color: colors.BLACK, type: types.ERASABLE, year: 2024, image: "erasable-bee.webp" },
-    { id: "E003", character: characters.BUNNY_1, color: colors.PURPLE, type: types.ERASABLE, year: 2022, image: "erasable-bunny.webp" },
-    { id: "E004", character: characters.DINO, color: colors.GREEN, type: types.ERASABLE, image: "erasable-dino.webp" },
-    { id: "E005", character: characters.HIPPO, color: colors.BLUE, type: types.ERASABLE, year: 2024, image: "erasable-hippo.webp" },
-    { id: "E006", character: characters.KITTY, color: colors.BLACK, type: types.ERASABLE, image: "erasable-kitty.webp" },
-    { id: "E007", character: characters.LADYBUG, color: colors.RED, type: types.ERASABLE, year: 2026, image: "erasable-ladybug.webp" },
-    { id: "E008", character: characters.LLAMA, color: colors.BLUE, type: types.ERASABLE, image: "erasable-llama.webp" },
-    { id: "E009", character: characters.MONSTER, color: colors.BLUE, type: types.ERASABLE, year: 2025, image: "erasable-monster.webp" },
-    { id: "E010", character: characters.TEDDY, color: colors.RED, type: types.ERASABLE, year: 2023, image: "erasable-teddy.webp" },
-    { id: "E011", character: characters.TIGER, color: colors.ORANGE, type: types.ERASABLE, year: 2025, image: "erasable-tiger.webp" },
-    { id: "E012", character: characters.UNICORN, color: colors.PINK, type: types.ERASABLE, year: 2022, image: "erasable-unicorn.webp" },
-    { id: "E013", character: characters.BUTTERFLY, color: colors.PINK, type: types.ERASABLE, year: 2025, image: "erasable-butterfly.webp" },
-    { id: "E014", character: characters.PENGUIN, color: colors.TURQUOISE, type: types.ERASABLE, year: 2024, image: "erasable-penguin.webp" },
-    { id: "E015", character: characters.SHARK, color: colors.BLUE, type: types.ERASABLE, year: 2023, image: "erasable-shark.webp" },
-    { id: "E016", character: characters.CORGI, color: colors.BLACK, type: types.ERASABLE, year: 2023, image: "erasable-corgi.png" },
+    { id: "E001", character: characters.PANDA, color: colors.BLACK, type: types.ERASABLE, image: "erasable-panda.webp", legamiId: "VEP0001" },
+    { id: "E002", character: characters.BEE, color: colors.BLACK, type: types.ERASABLE, year: 2024, image: "erasable-bee.webp", legamiId: "VEP0029" },
+    { id: "E003", character: characters.BUNNY_1, color: colors.PURPLE, type: types.ERASABLE, year: 2022, image: "erasable-bunny.webp", legamiId: "VEP0011" },
+    { id: "E004", character: characters.DINO, color: colors.GREEN, type: types.ERASABLE, image: "erasable-dino.webp", legamiId: "GEP0065" },
+    { id: "E005", character: characters.HIPPO, color: colors.BLUE, type: types.ERASABLE, year: 2024, image: "erasable-hippo.webp", legamiId: "GEP0068" },
+    { id: "E006", character: characters.KITTY, color: colors.BLACK, type: types.ERASABLE, image: "erasable-kitty.webp", legamiId: "VEP0005" },
+    { id: "E007", character: characters.LADYBUG, color: colors.RED, type: types.ERASABLE, year: 2026, image: "erasable-ladybug.webp", legamiId: "VEP0074" },
+    { id: "E008", character: characters.LLAMA, color: colors.BLUE, type: types.ERASABLE, image: "erasable-llama.webp", legamiId: "VEP0010" },
+    { id: "E009", character: characters.MONSTER, color: colors.BLUE, type: types.ERASABLE, year: 2025, image: "erasable-monster.webp", legamiId: "VEP0056" },
+    { id: "E010", character: characters.TEDDY, color: colors.RED, type: types.ERASABLE, year: 2023, image: "erasable-teddy.webp", legamiId: "VEP0024" },
+    { id: "E011", character: characters.TIGER, color: colors.ORANGE, type: types.ERASABLE, year: 2025, image: "erasable-tiger.webp", legamiId: "VEP0044" },
+    { id: "E012", character: characters.UNICORN, color: colors.PINK, type: types.ERASABLE, year: 2022, image: "erasable-unicorn.webp", legamiId: "VEP0013" },
+    { id: "E013", character: characters.BUTTERFLY, color: colors.PINK, type: types.ERASABLE, year: 2025, image: "erasable-butterfly.webp", legamiId: "VEP0045" },
+    { id: "E014", character: characters.PENGUIN, color: colors.TURQUOISE, type: types.ERASABLE, year: 2024, image: "erasable-penguin.webp", legamiId: "VEP0033" },
+    { id: "E015", character: characters.SHARK, color: colors.BLUE, type: types.ERASABLE, year: 2023, image: "erasable-shark.webp", legamiId: "VEP0006" },
+    { id: "E016", character: characters.CORGI, color: colors.BLACK, type: types.ERASABLE, year: 2023, image: "erasable-corgi.png", note: "Exclusive to Ryman" },
 
     // 2026
+    { id: "E065", character: characters.GOLDEN_RETRIEVER, color: colors.RED, type: types.ERASABLE, multipack: multipacks.FUREVER_FRIENDS, image: "erasable-retriever.jpg" },
+    { id: "E066", character: characters.BULLDOG, color: colors.BLUE, type: types.ERASABLE, multipack: multipacks.FUREVER_FRIENDS, image: "erasable-bulldog.jpg" },
+    { id: "E067", character: characters.POODLE, color: colors.BLACK, type: types.ERASABLE, multipack: multipacks.FUREVER_FRIENDS, image: "erasable-poodle.jpg" },
     { id: "E017", character: characters.BIRD_YELLOW_BLUE_PURPLE, color: colors.TURQUOISE, type: types.ERASABLE, multipack: multipacks.BETTER_TOGETHER_1, image: "erasable-bird1.webp" },
     { id: "E018", character: characters.BIRD_ORANGE_GREEN_YELLOW, color: colors.ORANGE, type: types.ERASABLE, multipack: multipacks.BETTER_TOGETHER_1, image: "erasable-bird2.jpeg" },
 
@@ -259,7 +266,7 @@ const pens = [
     { id: "E050", character: characters.PUMPKIN, color: colors.ORANGE, type: types.ERASABLE, multipack: multipacks.BOO_CREW_3, image: "erasable-pumpkin.jpg" },
     { id: "E051", character: characters.LION_2, color: colors.ORANGE, type: types.ERASABLE, multipack: multipacks.WILD_SAVANNAH, image: "erasable-lion.jpg" },
     { id: "E052", character: characters.ELEPHANT, color: colors.BLUE, type: types.ERASABLE, multipack: multipacks.WILD_SAVANNAH, image: "erasable-elephant.jpg" },
-    { id: "E053", character: characters.GIRAFFE, color: colors.BLACK, type: types.ERASABLE, multipack: multipacks.WILD_SAVANNAH, individual: true, image: "erasable-giraffe.webp" },
+    { id: "E053", character: characters.GIRAFFE, color: colors.BLACK, type: types.ERASABLE, multipack: multipacks.WILD_SAVANNAH, individual: true, image: "erasable-giraffe.webp", legamiId: "VEP0019" },
 
     // 2022
     { id: "E054", character: characters.KOALA_CHRISTMAS, color: colors.BLUE, type: types.ERASABLE, event: events.CHRISTMAS, year: 2022, image: "erasable-christmasjoala.jpg" },
