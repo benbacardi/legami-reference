@@ -273,6 +273,10 @@
 
         const CURRENT_YEAR = new Date().getFullYear();
 
+        function updateLightBoxes() {
+            var lightbox = new SimpleLightbox(".pen-image-link", { captions: false, nav: false, showCounter: false })
+        }
+
         document.addEventListener('alpine:init', () => {
             Alpine.data('penData', () => ({
 
@@ -376,6 +380,9 @@
                     this.$watch('showImages', (value) => {
                         localStorage.setItem('showImages', JSON.stringify(value));
                     });
+                    this.$watch('filteredPens', (value) => {
+                        updateLightBoxes();
+                    });
                 },
 
                 updateUrl() {
@@ -447,7 +454,7 @@
         })
 
         document.addEventListener('alpine:initialized', () => {
-            var lightbox = new SimpleLightbox(".pen-image-link", { captions: false, nav: false, showCounter: false })
+            updateLightBoxes();
         })
 
     </script>
