@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="css/simple-lightbox.min.css">
     <link rel="stylesheet" href="css/style.css?v=6">
 
-    <script src="js/legami.js?v=6"></script>
+    <script src="js/legami.js?v=7"></script>
     <script src="js/simple-lightbox.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@ryangjchandler/alpine-tooltip@1.x.x/dist/cdn.min.js" defer></script>
     <script src="https://unpkg.com/alpinejs" defer></script>
@@ -426,6 +426,9 @@
                                 return pen;
                             }
                             if (this.params.pack === 'multi' && pen.multipack) {
+                                return pen;
+                            }
+                            if (pen.multipack && this.params.pack === pen.multipack.name) {
                                 return pen;
                             }
                         });
