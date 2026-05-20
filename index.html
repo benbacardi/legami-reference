@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="fa/css/all.min.css">
     <link rel="stylesheet" href="css/simple-lightbox.min.css">
-    <link rel="stylesheet" href="css/style.css?v=6">
+    <link rel="stylesheet" href="css/style.css?v=7">
 
     <script src="js/legami.js?v=7"></script>
     <script src="js/simple-lightbox.min.js"></script>
@@ -108,7 +108,7 @@
         <div class="penHeader">
             <h2><span x-text="filteredPens.length"></span> Pen<span x-show="filteredPens.length !== 1">s</span></h2>
             <div class="chosen-filters">
-                <span x-show="params.character !== 'all'">
+                <span x-show="params.character !== 'all'" @click="params.character = 'all'">
                     <template x-for="group in characterGroups">
                         <span x-show="params.character == group.name" class="types">
                             <button class="character active"
@@ -117,7 +117,7 @@
                         </span>
                     </template>
                 </span>
-                <span x-show="params.color !== 'all'">
+                <span x-show="params.color !== 'all'" @click="params.color = 'all'">
                     <template x-for="color in colors">
                         <span x-show="params.color.toLowerCase() == color.name.toLowerCase()">
                             <button class="color active" :class="{'metallic': color.metallic}"
@@ -126,7 +126,7 @@
                         </span>
                     </template>
                 </span>
-                <span x-show="params.type !== 'all'">
+                <span x-show="params.type !== 'all'" @click="params.type = 'all'">
                     <template x-for="type in types">
                         <span x-show="params.type == type.code" class="types">
                             <span class="type active" :style="'--local-color: ' + type.color" :title="type.name"
@@ -134,7 +134,7 @@
                         </span>
                     </template>
                 </span>
-                <span x-show="params.event !== 'all'">
+                <span x-show="params.event !== 'all'" @click="params.event = 'all'">
                     <template x-for="event in events">
                         <span x-show="params.event == event.name" class="types">
                             <span class="type active" :title="event.name" x-text="event.name" x-tooltip="event.name"
@@ -142,11 +142,15 @@
                         </span>
                     </template>
                 </span>
-                <span x-show="params.pack !== 'all'" class="types">
+                <span x-show="params.pack !== 'all'" class="types" @click="params.pack = 'all'">
                     <span x-show="params.pack == 'individual'" class="type active" title="Individual"
                         style="--local-color: var(--orange)">Individual</span>
                     <span x-show="params.pack == 'multi'" class="type active" title="Multipack"
                         style="--local-color: var(--orange)">Multipack</span>
+                    <template x-if="params.pack !== 'individual' && params.pack !== 'multi'">
+                        <span class="type active" :title="params.pack" x-text="params.pack"
+                            style="--local-color: var(--orange)"></span>
+                    </template>
                 </span>
             </div>
             <button @click="showImages = !showImages" class="filter-button show-images" title="Toggle pen images"><span
