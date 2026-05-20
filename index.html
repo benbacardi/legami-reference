@@ -200,7 +200,8 @@
                                         :class="{'discontinued': pen.multipack.discontinued && penIsAvailable(pen)}">
                                         <i class="fas fa-fw fa-border-all"
                                             x-tooltip="'Multipack' + (pen.multipack.discontinued && penIsAvailable(pen) ? ' (Discontinued)' : '')"></i>
-                                        <span x-text="pen.multipack.name"></span>
+                                        <span x-text="pen.multipack.name" @click="params.pack = pen.multipack.name"
+                                            @click.stop></span>
                                     </p>
                                 </template>
 
@@ -214,14 +215,16 @@
                                 <template x-if="pen.multipack && pen.multipack.event">
                                     <p class="note">
                                         <i class="fas fa-fw fa-champagne-glasses" x-tooltip="'Event'"></i>
-                                        <span x-text="pen.multipack.event.name"></span>
+                                        <span x-text="pen.multipack.event.name"
+                                            @click="params.event = pen.multipack.event.name" @click.stop></span>
                                     </p>
                                 </template>
 
                                 <template x-if="pen.event">
                                     <p class="note">
                                         <i class="fas fa-fw fa-champagne-glasses" x-tooltip="'Event'"></i>
-                                        <span x-text="pen.event.name"></span>
+                                        <span x-text="pen.event.name" @click="params.event = pen.event.name"
+                                            @click.stop></span>
                                     </p>
                                 </template>
 
