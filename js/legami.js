@@ -10,6 +10,7 @@ const characters = {
     DINO: { name: "Dino", statement: "Rooaarrr!", image: "dino.jpg" },
     HIPPO: { name: "Hippo", statement: "Hip Hippo Hooray", image: "hippo.jpg" },
     KITTY: { name: "Kitty", statement: "Be Curious", image: "kitty.jpg" },
+    KITTY_2: { name: "Kitty", statement: "Meow", image: "kitty.jpg" },
     KOALA_1: { name: "Koala", statement: "Let Me Sleep", image: "koala.jpg" },
     LADYBUG: { name: "Ladybug", statement: "Get Lucky", image: "ladybug.jpg" },
     LION_1: { name: "Lion", statement: "Braveheart", image: "lion.jpg" },
@@ -85,7 +86,7 @@ const characterGroups = {
     BUNNY: { "name": "Bunny", characters: [characters.BUNNY_1, characters.BUNNY_2, characters.EASTER_BUNNY] },
     DINO: { "name": "Dino", characters: [characters.DINO] },
     HIPPO: { "name": "Hippo", characters: [characters.HIPPO] },
-    KITTY: { "name": "Kitty", characters: [characters.KITTY, characters.HALLOWEEN_CAT, characters.CAT_WITH_WOOL] },
+    KITTY: { "name": "Kitty", characters: [characters.KITTY, characters.KITTY_2, characters.HALLOWEEN_CAT, characters.CAT_WITH_WOOL] },
     KOALA: { "name": "Koala", characters: [characters.KOALA_1, characters.KOALA_2, characters.KOALA_CHRISTMAS] },
     LADYBUG: { "name": "Ladybug", characters: [characters.LADYBUG] },
     LION: { "name": "Lion", characters: [characters.LION_1, characters.LION_2] },
@@ -195,6 +196,7 @@ const pens = [
     { id: "F013", character: characters.TEDDY, color: colors.RED, type: types.FRIENDS, image: "friends-teddy.webp", legamiId: "CPP0003" },
     { id: "F014", character: characters.TIGER, color: colors.ORANGE, type: types.FRIENDS, image: "friends-tiger.webp", legamiId: "CPP0008" },
     { id: "F015", character: characters.UNICORN, color: colors.NEON_PINK, type: types.FRIENDS, image: "friends-unicorn.webp", legamiId: "CPP0006" },
+    { id: "F022", character: characters.KITTY_2, color: colors.PINK, type: types.FRIENDS, image: "friends-kitty-meow.png", year: 2026, legamiId: "CPP0017", notes: "Pen barrel fades from pink to purple" },
 
     // 2026
     { id: "F016", character: characters.BUNNY_2, color: colors.METALLIC_PINK, type: types.FRIENDS, multipack: multipacks.HOPPY_EASTER_1, image: "friends-bunny2.webp", legamiId: "CPP0028" },

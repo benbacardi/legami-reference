@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="css/simple-lightbox.min.css">
     <link rel="stylesheet" href="css/style.css?v=7">
 
-    <script src="js/legami.js?v=8"></script>
+    <script src="js/legami.js?v=9"></script>
     <script src="js/simple-lightbox.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@ryangjchandler/alpine-tooltip@1.x.x/dist/cdn.min.js" defer></script>
     <script src="https://unpkg.com/alpinejs" defer></script>
@@ -243,9 +243,10 @@
                                     <use href="#ink"></use>
                                 </svg>
                             </template>
+
                         </div>
                     </div>
-                    <div :class="'type type-' + pen.type.code" x-text="pen.type.name"></div>
+                    <div :class="'type type-' + pen.type.code" x-text="pen.type.name" x-tooltip="penIds(pen)"></div>
                 </div>
             </template>
         </div>
@@ -298,6 +299,17 @@
                 characterGroups: characterGroups,
                 events: events,
                 collection: JSON.parse(localStorage.getItem('owned') || '[]'),
+
+                penIds(pen) {
+                    if (!pen.legamiId) {
+                        return "Unknown ID";
+                    }
+                    if (Array.isArray(pen.legamiId)) {
+                        return pen.legamiId.join(", ");
+                    } else {
+                        return [pen.legamiId].join(", ");
+                    }
+                },
 
                 penIsAvailable(pen) {
                     if (pen.individual || !pen.multipack) {
