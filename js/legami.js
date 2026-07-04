@@ -1,5 +1,5 @@
 const types = {
-    FRIENDS: { name: "Lovely Friends", code: "friends", color: "241, 99, 142" },
+    FRIENDS: { name: "Gel Pens", code: "friends", color: "241, 99, 142" },
     ERASABLE: { name: "Erasable", code: "erasable", color: "147, 121, 153" },
 }
 
