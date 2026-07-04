@@ -141,7 +141,6 @@ const colors = {
     BLUE: { name: "Blue", color: "#194D9B" },
     GREEN: { name: "Green", color: "#4BA23F" },
     RED: { name: "Red", color: "#D2021D" },
-    TURQUOISE: { name: "Turquoise", color: "#C5ECEC" },
     ORANGE: { name: "Orange", color: "#EA6C2C" },
     SKY_BLUE: { name: "Sky Blue", color: "#87CEEB" },
     NEON_GREEN: { name: "Neon Green", color: "#39FF14" },
@@ -190,13 +189,14 @@ const pens = [
     { id: "F007", character: characters.KOALA_1, color: colors.GREEN, type: types.FRIENDS, image: "friends-koala.webp", legamiId: "CPP0004" },
     { id: "F008", character: characters.LADYBUG, color: colors.RED, type: types.FRIENDS, year: 2026, image: "friends-ladybug.webp", legamiId: "CPP0027" },
     { id: "F009", character: characters.LION_1, color: colors.BLACK, type: types.FRIENDS, year: 2023, image: "friends-lion.webp", legamiId: "CPP0013" },
-    { id: "F010", character: characters.LLAMA, color: colors.TURQUOISE, type: types.FRIENDS, image: "friends-llama.webp", legamiId: "CPP0010" },
+    { id: "F010", character: characters.LLAMA, color: colors.SKY_BLUE, type: types.FRIENDS, image: "friends-llama.webp", legamiId: "CPP0010" },
     { id: "F011", character: characters.MONSTER, color: colors.BLUE, type: types.FRIENDS, image: "friends-monster.webp", legamiId: "CPP0014" },
     { id: "F012", character: characters.SLOTH, color: colors.BLUE, type: types.FRIENDS, image: "friends-sloth.webp", legamiId: "CPP0005" },
     { id: "F013", character: characters.TEDDY, color: colors.RED, type: types.FRIENDS, image: "friends-teddy.webp", legamiId: "CPP0003" },
     { id: "F014", character: characters.TIGER, color: colors.ORANGE, type: types.FRIENDS, image: "friends-tiger.webp", legamiId: "CPP0008" },
     { id: "F015", character: characters.UNICORN, color: colors.NEON_PINK, type: types.FRIENDS, image: "friends-unicorn.webp", legamiId: "CPP0006" },
     { id: "F022", character: characters.KITTY_2, color: colors.PINK, type: types.FRIENDS, image: "friends-kitty-meow.png", year: 2026, legamiId: "CPP0017", notes: "Pen barrel fades from pink to purple" },
+    { id: "F023", character: characters.LLAMA, color: colors.SKY_BLUE, type: types.FRIENDS, image: "friends-llama-patterned.webp", year: 2026, notes: "Pen barrel fully patterned" },
 
     // 2026
     { id: "F016", character: characters.BUNNY_2, color: colors.METALLIC_PINK, type: types.FRIENDS, multipack: multipacks.HOPPY_EASTER_1, image: "friends-bunny2.webp", legamiId: "CPP0028" },
