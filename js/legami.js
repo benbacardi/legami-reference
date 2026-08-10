@@ -78,6 +78,8 @@ const characters = {
     GOLDEN_RETRIEVER: { name: "Golden Retriever", statement: "Fur-ever Friends", image: "retriever.png" },
     BULLDOG: { name: "Bulldog", statement: "Big Nap Boss", image: "bulldog.png" },
     POODLE: { name: "Poodle", statement: "Cute? ... Try iconic!", image: "poodle.png" },
+    GORILLA: { name: "Gorilla", statement: "Wild but kind", image: "gorilla.webp" },
+    HEN: { name: "Hen", statement: "I Care a Lot", image: "hen.webp" },
 }
 
 const characterGroups = {
@@ -101,6 +103,8 @@ const characterGroups = {
     GHOST: { "name": "Ghost", characters: [characters.GHOST] },
     BUTTERFLY: { "name": "Butterfly", characters: [characters.BUTTERFLY] },
     GIRAFFE: { "name": "Giraffe", characters: [characters.GIRAFFE] },
+    GORILLA: { "name": "Gorilla", characters: [characters.GORILLA] },
+    HEN: { "name": "Hen", characters: [characters.HEN] },
     PENGUIN: { "name": "Penguin", characters: [characters.PENGUIN] },
     SHARK: { "name": "Shark", characters: [characters.SHARK, characters.SHARK_GRUMPY] },
     CORGI: { "name": "Corgi", characters: [characters.CORGI] },
@@ -197,6 +201,7 @@ const pens = [
     { id: "F015", character: characters.UNICORN, color: colors.NEON_PINK, type: types.FRIENDS, image: "friends-unicorn.webp", legamiId: "CPP0006" },
     { id: "F022", character: characters.KITTY_2, color: colors.PINK, type: types.FRIENDS, image: "friends-kitty-meow.png", year: 2026, legamiId: "CPP0017", notes: "Pen barrel fades from pink to purple" },
     { id: "F023", character: characters.LLAMA, color: colors.SKY_BLUE, type: types.FRIENDS, image: "friends-llama-patterned.webp", year: 2026, notes: "Pen barrel fully patterned" },
+    { id: "F024", character: characters.GORILLA, color: colors.BLACK, type: types.FRIENDS, image: "friends-gorilla.png", year: 2026, legamiId: "CPP0030" },
 
     // 2026
     { id: "F016", character: characters.BUNNY_2, color: colors.METALLIC_PINK, type: types.FRIENDS, multipack: multipacks.HOPPY_EASTER_1, image: "friends-bunny2.webp", legamiId: "CPP0028" },
@@ -227,6 +232,8 @@ const pens = [
     { id: "E014", character: characters.PENGUIN, color: colors.TURQUOISE, type: types.ERASABLE, year: 2024, image: "erasable-penguin.webp", legamiId: "EP0033" },
     { id: "E015", character: characters.SHARK, color: colors.BLUE, type: types.ERASABLE, year: 2023, image: "erasable-shark.webp", legamiId: "EP0006" },
     { id: "E016", character: characters.CORGI, color: colors.BLACK, type: types.ERASABLE, year: 2023, image: "erasable-corgi.png", note: "Exclusive to Ryman", legamiId: "EP0020" },
+    { id: "E068", character: characters.GORILLA, color: colors.BLACK, type: types.ERASABLE, year: 2026, image: "erasable-gorilla.png", legamiId: "EP0085" },
+    { id: "E069", character: characters.HEN, color: colors.RED, type: types.ERASABLE, year: 2026, image: "erasable-hen.png", legamiId: "EP0086" },
 
     // 2026
     { id: "E065", character: characters.GOLDEN_RETRIEVER, color: colors.RED, type: types.ERASABLE, multipack: multipacks.FUREVER_FRIENDS, image: "erasable-retriever.jpg" },
