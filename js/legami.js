@@ -1,6 +1,7 @@
 const types = {
     FRIENDS: { name: "Lovely Friends", code: "friends", color: "241, 99, 142" },
     ERASABLE: { name: "Erasable", code: "erasable", color: "147, 121, 153" },
+    HUGS: { name: "Free Hugs", code: "hugs", color: "94, 186, 178" },
 }
 
 const characters = {
@@ -215,6 +216,15 @@ const pens = [
     // 2024
     { id: "F021", character: characters.GHOST, color: colors.NEON_GREEN, type: types.FRIENDS, event: events.HALLOWEEN, year: 2024, image: "friends-ghoost.jpg" },
 
+    // Free Hugs
+    { id: "H001", character: characters.PANDA, color: colors.BLACK, type: types.HUGS, image: "hugs-panda.webp", year: 2026, legamiId: "HUG0001" },
+    { id: "H002", character: characters.KITTY_2, color: colors.BLUE, type: types.HUGS, image: "hugs-kitty.webp", year: 2026, legamiId: "HUG0002" },
+    { id: "H003", character: characters.TEDDY, color: colors.RED, type: types.HUGS, image: "hugs-teddy.webp", year: 2026, legamiId: "HUG0003" },
+    { id: "H004", character: characters.UNICORN, color: colors.PINK, type: types.HUGS, image: "hugs-unicorn.webp", year: 2026, legamiId: "HUG0004" },
+    { id: "H005", character: characters.PENGUIN, color: colors.BLUE, type: types.HUGS, image: "hugs-penguin.webp", year: 2026, legamiId: "HUG0005" },
+    { id: "H006", character: characters.SLOTH, color: colors.GREEN, type: types.HUGS, image: "hugs-sloth.webp", year: 2026, legamiId: "HUG0006" },
+    { id: "H007", character: characters.GORILLA, color: colors.BLACK, type: types.HUGS, image: "hugs-gorilla.webp", year: 2026, legamiId: "HUG0007" },
+
     // Erasable
     { id: "E001", character: characters.PANDA, color: colors.BLACK, type: types.ERASABLE, image: "erasable-panda.webp", legamiId: "EP0001" },
     { id: "E002", character: characters.BEE, color: colors.BLACK, type: types.ERASABLE, year: 2024, image: "erasable-bee.webp", legamiId: "EP0029" },
@@ -298,4 +308,5 @@ const pens = [
     { id: "E062", character: characters.KOALA_2, color: colors.RED, type: types.ERASABLE, multipack: multipacks.ORIGINAL, individual: true, discontinued: 2023, image: "erasable-koala.webp", legamiId: "EP0003" },
     { id: "E063", character: characters.SHARK_GRUMPY, color: colors.BLUE, type: types.ERASABLE, discontinued: 2023, image: "erasable-sharkgrumpy.webp", legamiId: "EP0006" },
     { id: "E064", character: characters.UNICORN, color: colors.BLACK, type: types.ERASABLE, discontinued: 2022, notes: "Plain white pen", image: "erasable-unicornwhite.jpg", legamiId: "EP0004" },
+
 ]
