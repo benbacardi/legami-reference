@@ -7,6 +7,7 @@
     --text-color: 78, 61, 53;
     --pink: 241, 99, 142;
     --purple: 147, 121, 153;
+    --blue: 94, 186, 178;
     --orange: 209, 124, 62;
     --grid-columns: 5;
 }
@@ -338,6 +339,11 @@ label {
 .type.type-erasable {
     background-color: rgba(239, 232, 239, 0.6);
     color: rgb(var(--purple));
+}
+
+.type.type-hugs {
+    background-color: rgba(94, 186, 178, 0.15);
+    color: rgb(var(--blue));
 }
 
 .card-ribbon {
