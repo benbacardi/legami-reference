@@ -148,6 +148,7 @@ const colors = {
     RED: { name: "Red", color: "#D2021D" },
     ORANGE: { name: "Orange", color: "#EA6C2C" },
     SKY_BLUE: { name: "Sky Blue", color: "#87CEEB" },
+    TURQUOISE: { name: "Turquoise", color: "#A3E2DF" },
     NEON_GREEN: { name: "Neon Green", color: "#39FF14" },
     NEON_PINK: { name: "Neon Pink", color: "#FF1493" },
     METALLIC_PINK: { name: "Metallic Pink", color: "#E6A8D7", metallic: true },
