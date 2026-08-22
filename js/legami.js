@@ -202,7 +202,7 @@ const pens = [
     { id: "F014", character: characters.TIGER, color: colors.ORANGE, type: types.FRIENDS, image: "friends-tiger.webp", legamiId: "CPP0008" },
     { id: "F015", character: characters.UNICORN, color: colors.NEON_PINK, type: types.FRIENDS, image: "friends-unicorn.webp", legamiId: "CPP0006" },
     { id: "F022", character: characters.KITTY_2, color: colors.PINK, type: types.FRIENDS, image: "friends-kitty-meow.png", year: 2026, legamiId: "CPP0017", notes: "Pen barrel fades from pink to purple" },
-    { id: "F023", character: characters.LLAMA, color: colors.SKY_BLUE, type: types.FRIENDS, image: "friends-llama-patterned.webp", year: 2026, notes: "Pen barrel fully patterned" },
+    { id: "F023", character: characters.LLAMA, color: colors.SKY_BLUE, type: types.FRIENDS, image: "friends-llama-patterned.webp", year: 2026, legamiId: "CPP0025", notes: "Pen barrel fully patterned" },
     { id: "F024", character: characters.GORILLA, color: colors.BLACK, type: types.FRIENDS, image: "friends-gorilla.png", year: 2026, legamiId: "CPP0030" },
 
     // 2026
