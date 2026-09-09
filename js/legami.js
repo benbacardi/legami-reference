@@ -81,15 +81,20 @@ const characters = {
     POODLE: { name: "Poodle", statement: "Cute? ... Try iconic!", image: "poodle.png" },
     GORILLA: { name: "Gorilla", statement: "Wild but kind", image: "gorilla.webp" },
     HEN: { name: "Hen", statement: "I Care a Lot", image: "hen.webp" },
+    PANDA_HALLOWEEN_1: { name: "Vampire Panda", statement: "Here for the boo-ffet", image: "pandavampire.webp" },
+    PANDA_HALLOWEEN_2: { name: "Vampire Panda", statement: "Bam-Boo!", image: "pandavampire.webp" },
+    PANDA_HALLOWEEN_3: { name: "Vampire Panda", statement: "Spooky Boo-gie", image: "pandavampire.webp" },
+    MUMMY_CAT: { name: "Mummy Cat", statement: "Nine lives later...", image: "mummycat.png" },
+    GHOST_TEDDY: { name: "Ghost Teddy", statement: "Guess who's back?", image: "ghostteddy.png" },
 }
 
 const characterGroups = {
-    PANDA: { "name": "Panda", characters: [characters.PANDA, characters.PANDA_CHRISTMAS] },
+    PANDA: { "name": "Panda", characters: [characters.PANDA, characters.PANDA_CHRISTMAS, characters.PANDA_HALLOWEEN_1, characters.PANDA_HALLOWEEN_2, characters.PANDA_HALLOWEEN_3] },
     BEE: { "name": "Bee", characters: [characters.BEE] },
     BUNNY: { "name": "Bunny", characters: [characters.BUNNY_1, characters.BUNNY_2, characters.EASTER_BUNNY] },
     DINO: { "name": "Dino", characters: [characters.DINO] },
     HIPPO: { "name": "Hippo", characters: [characters.HIPPO] },
-    KITTY: { "name": "Kitty", characters: [characters.KITTY, characters.KITTY_2, characters.HALLOWEEN_CAT, characters.CAT_WITH_WOOL] },
+    KITTY: { "name": "Kitty", characters: [characters.KITTY, characters.KITTY_2, characters.HALLOWEEN_CAT, characters.CAT_WITH_WOOL, characters.MUMMY_CAT] },
     KOALA: { "name": "Koala", characters: [characters.KOALA_1, characters.KOALA_2, characters.KOALA_CHRISTMAS] },
     LADYBUG: { "name": "Ladybug", characters: [characters.LADYBUG] },
     LION: { "name": "Lion", characters: [characters.LION_1, characters.LION_2] },
@@ -98,10 +103,10 @@ const characterGroups = {
     SLOTH: { "name": "Sloth", characters: [characters.SLOTH] },
     TIGER: { "name": "Tiger", characters: [characters.TIGER] },
     UNICORN: { "name": "Unicorn", characters: [characters.UNICORN] },
-    BEAR: { "name": "Bear", characters: [characters.TEDDY, characters.WHITE_BEAR, characters.BROWN_BEAR, characters.BEAR, characters.BEAR_CHRISTMAS, characters.POLAR_BEAR_CHRISTMAS] },
+    BEAR: { "name": "Bear", characters: [characters.TEDDY, characters.WHITE_BEAR, characters.BROWN_BEAR, characters.BEAR, characters.BEAR_CHRISTMAS, characters.POLAR_BEAR_CHRISTMAS, characters.GHOST_TEDDY] },
     CHICK: { "name": "Chick", characters: [characters.CHICK, characters.EASTER_CHICK] },
     SPIDER: { "name": "Spider", characters: [characters.SPIDER] },
-    GHOST: { "name": "Ghost", characters: [characters.GHOST] },
+    GHOST: { "name": "Ghost", characters: [characters.GHOST, characters.GHOST_TEDDY] },
     BUTTERFLY: { "name": "Butterfly", characters: [characters.BUTTERFLY] },
     GIRAFFE: { "name": "Giraffe", characters: [characters.GIRAFFE] },
     GORILLA: { "name": "Gorilla", characters: [characters.GORILLA] },
@@ -129,7 +134,7 @@ const characterGroups = {
     ELEPHANT: { "name": "Elephant", characters: [characters.ELEPHANT] },
     YETI: { "name": "Yeti", characters: [characters.YETI] },
     FRANKENSTEINS_MONSTER: { "name": "Frankenstein's Monster", characters: [characters.FRANKENSTEINS_MONSTER] },
-    MUMMY: { "name": "Mummy", characters: [characters.MUMMY] },
+    MUMMY: { "name": "Mummy", characters: [characters.MUMMY, characters.MUMMY_CAT] },
     PUMPKIN: { "name": "Pumpkin", characters: [characters.PUMPKIN] },
     BAT: { "name": "Bat", characters: [characters.BAT, characters.BAT2] },
     WITCH: { "name": "Witch", characters: [characters.WITCH] },
@@ -163,6 +168,12 @@ const events = {
 }
 
 const multipacks = {
+
+    // 2026
+    SPOOKY_PARTY: { name: "Spooky Party", event: events.HALLOWEEN, year: 2026, legamiId: "EP0095" },
+    SPOOKY_PARTY_FRIENDS: { name: "Spooky Party", event: events.HALLOWEEN, year: 2026, legamiId: "CPPSET3" },
+
+    // 2025
     BEARY_IN_LOVE: { name: "Beary in Love", event: events.VALENTINES, year: 2025, legamiId: "CPPSET1" },
     HOPPY_EASTER_1: { name: "Hoppy Easter", event: events.EASTER, year: 2026, legamiId: "CPPSET2" },
 
@@ -206,6 +217,9 @@ const pens = [
     { id: "F024", character: characters.GORILLA, color: colors.BLACK, type: types.FRIENDS, image: "friends-gorilla.png", year: 2026, legamiId: "CPP0030" },
 
     // 2026
+    { id: "F025", character: characters.GHOST_TEDDY, color: colors.BLACK, type: types.FRIENDS, multipack: multipacks.SPOOKY_PARTY_FRIENDS, year: 2026, image: "CPPSET3_3.webp" },
+    { id: "F026", character: characters.MUMMY_CAT, color: colors.PURPLE, type: types.FRIENDS, multipack: multipacks.SPOOKY_PARTY_FRIENDS, year: 2026, image: "CPPSET3_4.webp" },
+
     { id: "F016", character: characters.BUNNY_2, color: colors.METALLIC_PINK, type: types.FRIENDS, multipack: multipacks.HOPPY_EASTER_1, image: "friends-bunny2.webp", legamiId: "CPP0028" },
     { id: "F017", character: characters.CHICK, color: colors.METALLIC_PURPLE, type: types.FRIENDS, multipack: multipacks.HOPPY_EASTER_1, image: "friends-chick.webp", legamiId: "CPP0029" },
 
@@ -247,6 +261,10 @@ const pens = [
     { id: "E069", character: characters.HEN, color: colors.RED, type: types.ERASABLE, year: 2026, image: "erasable-hen.png", legamiId: "EP0086" },
 
     // 2026
+    { id: "E068", character: characters.PANDA_HALLOWEEN_1, color: colors.RED, type: types.ERASABLE, multipack: multipacks.SPOOKY_PARTY, image: "EP0095_7.webp", notes: "Glow in the dark, in a coffin-shaped blind box" },
+    { id: "E069", character: characters.PANDA_HALLOWEEN_2, color: colors.BLACK, type: types.ERASABLE, multipack: multipacks.SPOOKY_PARTY, image: "EP0095_8.webp", notes: "Glow in the dark, in a coffin-shaped blind box" },
+    { id: "E070", character: characters.PANDA_HALLOWEEN_3, color: colors.PURPLE, type: types.ERASABLE, multipack: multipacks.SPOOKY_PARTY, image: "EP0095_9.webp", notes: "Glow in the dark, in a coffin-shaped blind box" },
+
     { id: "E065", character: characters.GOLDEN_RETRIEVER, color: colors.RED, type: types.ERASABLE, multipack: multipacks.FUREVER_FRIENDS, image: "erasable-retriever.jpg" },
     { id: "E066", character: characters.BULLDOG, color: colors.BLUE, type: types.ERASABLE, multipack: multipacks.FUREVER_FRIENDS, image: "erasable-bulldog.jpg" },
     { id: "E067", character: characters.POODLE, color: colors.BLACK, type: types.ERASABLE, multipack: multipacks.FUREVER_FRIENDS, image: "erasable-poodle.jpg" },
