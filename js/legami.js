@@ -262,7 +262,7 @@ const pens = [
 
     // 2026
     { id: "E068", character: characters.PANDA_HALLOWEEN_1, color: colors.RED, type: types.ERASABLE, multipack: multipacks.SPOOKY_PARTY, image: "EP0095_7.webp", notes: "Glow in the dark, in a coffin-shaped blind box" },
-    { id: "E069", character: characters.PANDA_HALLOWEEN_2, color: colors.BLACK, type: types.ERASABLE, multipack: multipacks.SPOOKY_PARTY, image: "EP0095_8.webp", notes: "Glow in the dark, in a coffin-shaped blind box" },
+    { id: "E069", character: characters.PANDA_HALLOWEEN_2, color: colors.BLACK, type: types.ERASABLE, multipack: multipacks.SPOOKY_PARTY, image: "EP0095_8.webp", notes: "Glow in the dark, in a coffin-shaped blind box. Gold seal; rare." },
     { id: "E070", character: characters.PANDA_HALLOWEEN_3, color: colors.PURPLE, type: types.ERASABLE, multipack: multipacks.SPOOKY_PARTY, image: "EP0095_9.webp", notes: "Glow in the dark, in a coffin-shaped blind box" },
 
     { id: "E065", character: characters.GOLDEN_RETRIEVER, color: colors.RED, type: types.ERASABLE, multipack: multipacks.FUREVER_FRIENDS, image: "erasable-retriever.jpg" },
