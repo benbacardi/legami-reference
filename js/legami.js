@@ -86,6 +86,7 @@ const characters = {
     PANDA_HALLOWEEN_3: { name: "Vampire Panda", statement: "Spooky Boo-gie", image: "pandavampire.webp" },
     MUMMY_CAT: { name: "Mummy Cat", statement: "Nine lives later...", image: "mummycat.png" },
     GHOST_TEDDY: { name: "Ghost Teddy", statement: "Guess who's back?", image: "ghostteddy.png" },
+    KOALA_3: { name: "Koala", statement: "Sleeping La Vida Loca", image: "koala.jpg" },
 }
 
 const characterGroups = {
@@ -95,7 +96,7 @@ const characterGroups = {
     DINO: { "name": "Dino", characters: [characters.DINO] },
     HIPPO: { "name": "Hippo", characters: [characters.HIPPO] },
     KITTY: { "name": "Kitty", characters: [characters.KITTY, characters.KITTY_2, characters.HALLOWEEN_CAT, characters.CAT_WITH_WOOL, characters.MUMMY_CAT] },
-    KOALA: { "name": "Koala", characters: [characters.KOALA_1, characters.KOALA_2, characters.KOALA_CHRISTMAS] },
+    KOALA: { "name": "Koala", characters: [characters.KOALA_1, characters.KOALA_2, characters.KOALA_CHRISTMAS, characters.KOALA_3] },
     LADYBUG: { "name": "Ladybug", characters: [characters.LADYBUG] },
     LION: { "name": "Lion", characters: [characters.LION_1, characters.LION_2] },
     LLAMA: { "name": "Llama", characters: [characters.LLAMA] },
@@ -259,6 +260,7 @@ const pens = [
     { id: "E016", character: characters.CORGI, color: colors.BLACK, type: types.ERASABLE, year: 2023, image: "erasable-corgi.png", note: "Exclusive to Ryman", legamiId: "EP0020" },
     { id: "E068", character: characters.GORILLA, color: colors.BLACK, type: types.ERASABLE, year: 2026, image: "erasable-gorilla.png", legamiId: "EP0085" },
     { id: "E069", character: characters.HEN, color: colors.RED, type: types.ERASABLE, year: 2026, image: "erasable-hen.png", legamiId: "EP0086" },
+    { id: "E071", character: characters.KOALA_3, color: colors.BLUE, type: types.ERASABLE, year: 2026, image: "erasable-koala2.webp", legamiId: "EP0089" },
 
     // 2026
     { id: "E068", character: characters.PANDA_HALLOWEEN_1, color: colors.RED, type: types.ERASABLE, multipack: multipacks.SPOOKY_PARTY, image: "EP0095_7.webp", notes: "Glow in the dark, in a coffin-shaped blind box" },
