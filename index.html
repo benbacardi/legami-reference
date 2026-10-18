@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="fa/css/all.min.css">
     <link rel="stylesheet" href="css/simple-lightbox.min.css">
-    <link rel="stylesheet" href="css/style.css?v=8">
+    <link rel="stylesheet" href="css/style.css?v=9">
 
     <script src="js/legami.js?v=18"></script>
     <script src="js/simple-lightbox.min.js"></script>
@@ -152,6 +152,10 @@
                             style="--local-color: var(--orange)"></span>
                     </template>
                 </span>
+                <span x-show="params.year !== 'all'" class="types" @click="params.year = 'all'">
+                    <span class="type active" :title="'Year: ' + params.year" x-text="params.year"
+                        style="--local-color: var(--orange)"></span>
+                </span>
             </div>
             <button @click="showImages = !showImages" class="filter-button show-images" title="Toggle pen images"><span
                     x-text="showImages ? 'Hide' : 'Show'"> </span> Large
@@ -201,14 +205,16 @@
                                         <i class="fas fa-fw fa-border-all"
                                             x-tooltip="'Multipack' + (pen.multipack.discontinued && penIsAvailable(pen) ? ' (Discontinued)' : '')"></i>
                                         <span x-text="pen.multipack.name" @click="params.pack = pen.multipack.name"
-                                            @click.stop></span>
+                                            @click.stop class="note-clickable"></span>
                                     </p>
                                 </template>
 
                                 <template x-if="penAvailableYears(pen)">
                                     <p class="note">
                                         <i class="far fa-fw fa-calendar" x-tooltip="'Year'"></i>
-                                        <span x-text="penAvailableYears(pen)"></span>
+                                        <span x-text="penAvailableYears(pen)"
+                                            @click="params.year = penStartYear(pen)"
+                                            @click.stop class="note-clickable"></span>
                                     </p>
                                 </template>
 
@@ -216,7 +222,8 @@
                                     <p class="note">
                                         <i class="fas fa-fw fa-champagne-glasses" x-tooltip="'Event'"></i>
                                         <span x-text="pen.multipack.event.name"
-                                            @click="params.event = pen.multipack.event.name" @click.stop></span>
+                                            @click="params.event = pen.multipack.event.name" @click.stop
+                                            class="note-clickable"></span>
                                     </p>
                                 </template>
 
@@ -224,7 +231,7 @@
                                     <p class="note">
                                         <i class="fas fa-fw fa-champagne-glasses" x-tooltip="'Event'"></i>
                                         <span x-text="pen.event.name" @click="params.event = pen.event.name"
-                                            @click.stop></span>
+                                            @click.stop class="note-clickable"></span>
                                     </p>
                                 </template>
 
@@ -287,6 +294,7 @@
                     'character': 'all',
                     'event': 'all',
                     'pack': 'all',
+                    'year': 'all',
                 },
 
                 showFilters: JSON.parse(localStorage.getItem('showFilters') || 'true'),
@@ -367,6 +375,12 @@
                     return result;
                 },
 
+                penStartYear(pen) {
+                    if (pen.year) return pen.year;
+                    if (pen.multipack && pen.multipack.year) return pen.multipack.year;
+                    return null;
+                },
+
                 toggleCollection(id) {
                     console.log("Toggling collection for pen " + id);
                     this.collection.includes(id)
@@ -420,6 +434,7 @@
                         'character': 'all',
                         'event': 'all',
                         'pack': 'all',
+                        'year': 'all',
                     }
                     window.history.replaceState({}, '', window.location.pathname);
                 },
@@ -458,6 +473,10 @@
                                 return pen;
                             }
                         });
+                    }
+                    if (this.params.year !== 'all') {
+                        const targetYear = Number(this.params.year);
+                        pens = pens.filter(pen => this.penStartYear(pen) === targetYear);
                     }
                     return pens
                 }

@@ -312,6 +312,14 @@ label {
     padding: 0;
 }
 
+.card .note .note-clickable {
+    cursor: pointer;
+}
+
+.card .note .note-clickable:hover {
+    text-decoration: underline;
+}
+
 .card .ink {
     height: 20px;
     color: blue;
