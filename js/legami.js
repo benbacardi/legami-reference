@@ -241,6 +241,7 @@ const pens = [
     { id: "H005", character: characters.PENGUIN, color: colors.BLUE, type: types.HUGS, image: "hugs-penguin.webp", year: 2026, legamiId: "HUG0005" },
     { id: "H006", character: characters.SLOTH, color: colors.GREEN, type: types.HUGS, image: "hugs-sloth.webp", year: 2026, legamiId: "HUG0006" },
     { id: "H007", character: characters.GORILLA, color: colors.BLACK, type: types.HUGS, image: "hugs-gorilla.webp", year: 2026, legamiId: "HUG0007" },
+    { id: "H008", character: characters.KOALA_3, color: colors.BLUE, type: types.HUGS, image: "hugs-koala.webp", year: 2026, legamiId: "HUG0008" },
 
     // Erasable
     { id: "E001", character: characters.PANDA, color: colors.BLACK, type: types.ERASABLE, image: "erasable-panda.webp", legamiId: "EP0001" },
