@@ -24,9 +24,9 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="fa/css/all.min.css">
     <link rel="stylesheet" href="css/simple-lightbox.min.css">
-    <link rel="stylesheet" href="css/style.css?v=9">
+    <link rel="stylesheet" href="css/style.css?v=10">
 
-    <script src="js/legami.js?v=21"></script>
+    <script src="js/legami.js?v=22"></script>
     <script src="js/simple-lightbox.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@ryangjchandler/alpine-tooltip@1.x.x/dist/cdn.min.js" defer></script>
     <script src="https://unpkg.com/alpinejs" defer></script>
@@ -202,8 +202,12 @@
                                 <template x-if="pen.multipack">
                                     <p class="note"
                                         :class="{'discontinued': pen.multipack.discontinued && penIsAvailable(pen)}">
-                                        <i class="fas fa-fw fa-border-all"
-                                            x-tooltip="'Multipack' + (pen.multipack.discontinued && penIsAvailable(pen) ? ' (Discontinued)' : '')"></i>
+                                        <template x-if="pen.multipack.image">
+                                            <a :href="'img/big/' + pen.multipack.image" class="multipack-image-link" @click.stop x-tooltip="'Multipack' + (pen.multipack.discontinued && penIsAvailable(pen) ? ' (Discontinued)' : '')"><i class="fas fa-fw fa-border-all"></i></a>
+                                        </template>
+                                        <template x-if="!pen.multipack.image">
+                                            <i class="fas fa-fw fa-border-all" x-tooltip="'Multipack' + (pen.multipack.discontinued && penIsAvailable(pen) ? ' (Discontinued)' : '')"></i>
+                                        </template>
                                         <span x-text="pen.multipack.name" @click="params.pack = pen.multipack.name"
                                             @click.stop class="note-clickable"></span>
                                     </p>
@@ -281,8 +285,14 @@
 
         const CURRENT_YEAR = new Date().getFullYear();
 
+        let _penLightbox = null;
+        let _multipackLightbox = null;
+
         function updateLightBoxes() {
-            var lightbox = new SimpleLightbox(".pen-image-link", { captions: false, nav: false, showCounter: false })
+            if (_penLightbox) _penLightbox.destroy();
+            if (_multipackLightbox) _multipackLightbox.destroy();
+            _penLightbox = new SimpleLightbox(".pen-image-link", { captions: false, nav: false, showCounter: false, uniqueImages: false })
+            _multipackLightbox = new SimpleLightbox(".multipack-image-link", { captions: false, nav: false, showCounter: false, uniqueImages: false })
         }
 
         document.addEventListener('alpine:init', () => {

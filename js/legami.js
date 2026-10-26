@@ -185,8 +185,8 @@ const multipacks = {
     // 2026
     SPOOKY_PARTY: { name: "Spooky Party", event: events.HALLOWEEN, year: 2026, legamiId: "EP0095" },
     SPOOKY_PARTY_FRIENDS: { name: "Spooky Party", event: events.HALLOWEEN, year: 2026, legamiId: "CPPSET3" },
-    JINGLE_ALL_THE_WAY: { name: "Jingle All The Way", event: events.CHRISTMAS, year: 2026, legamiId: "CPPSET4" },
-    DREAM_PEAKS: { name: "Dream Peaks", event: events.CHRISTMAS, year: 2026, legamiId: "EPSET0018" },
+    JINGLE_ALL_THE_WAY: { name: "Jingle All The Way", event: events.CHRISTMAS, year: 2026, legamiId: "CPPSET4", image: "CPPSET4_5.webp" },
+    DREAM_PEAKS: { name: "Dream Peaks", event: events.CHRISTMAS, year: 2026, legamiId: "EPSET0018", image: "EPSET0018_13.webp" },
 
     // 2025
     BEARY_IN_LOVE: { name: "Beary in Love", event: events.VALENTINES, year: 2025, legamiId: "CPPSET1" },

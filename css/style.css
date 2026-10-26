@@ -316,6 +316,11 @@ label {
     cursor: pointer;
 }
 
+.card .note a.multipack-image-link {
+    color: inherit;
+    cursor: pointer;
+}
+
 .card .note .note-clickable:hover {
     text-decoration: underline;
 }
