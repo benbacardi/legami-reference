@@ -76,6 +76,13 @@ const characters = {
     PENGUIN_CHRISTMAS: { name: "Penguin", statement: "Merry & Brrright", image: "penguin.jpg" },
     FOX_CHRISTMAS: { name: "Fox", statement: "Foxtastic Holidays", image: "fox.jpg" },
     POLAR_BEAR_CHRISTMAS: { name: "Polar Bear", statement: "Greetings from the North Pole", image: "polarbear.jpg" },
+    POLAR_BEAR_CHRISTMAS_2: { name: "Polar Bear", statement: "Special Hugs Delivery", image: "polarbear.jpg" },
+    PENGUIN_CHRISTMAS_2: { name: "Penguin", statement: "Wrapped in Joy", image: "penguin.jpg" },
+    OWL: { name: "Owl", statement: "Merry & Wise", image: "owl.png" },
+    BEAVER: { name: "Beaver", statement: "Handmade Joy", image: "beaver.png" },
+    WALRUS: { name: "Walrus", statement: "Oh what fun!", image: "walrus.png" },
+    ARCTIC_FOX: { name: "Arctic Fox", statement: "Icy chic", image: "arcticfox.png" },
+    HUSKY: { name: "Husky", statement: "Awooo-la-la", image: "husky.png" },
     GOLDEN_RETRIEVER: { name: "Golden Retriever", statement: "Fur-ever Friends", image: "retriever.png" },
     BULLDOG: { name: "Bulldog", statement: "Big Nap Boss", image: "bulldog.png" },
     POODLE: { name: "Poodle", statement: "Cute? ... Try iconic!", image: "poodle.png" },
@@ -104,7 +111,7 @@ const characterGroups = {
     SLOTH: { "name": "Sloth", characters: [characters.SLOTH] },
     TIGER: { "name": "Tiger", characters: [characters.TIGER] },
     UNICORN: { "name": "Unicorn", characters: [characters.UNICORN] },
-    BEAR: { "name": "Bear", characters: [characters.TEDDY, characters.WHITE_BEAR, characters.BROWN_BEAR, characters.BEAR, characters.BEAR_CHRISTMAS, characters.POLAR_BEAR_CHRISTMAS, characters.GHOST_TEDDY] },
+    BEAR: { "name": "Bear", characters: [characters.TEDDY, characters.WHITE_BEAR, characters.BROWN_BEAR, characters.BEAR, characters.BEAR_CHRISTMAS, characters.POLAR_BEAR_CHRISTMAS, characters.POLAR_BEAR_CHRISTMAS_2, characters.GHOST_TEDDY] },
     CHICK: { "name": "Chick", characters: [characters.CHICK, characters.EASTER_CHICK] },
     SPIDER: { "name": "Spider", characters: [characters.SPIDER] },
     GHOST: { "name": "Ghost", characters: [characters.GHOST, characters.GHOST_TEDDY] },
@@ -112,7 +119,7 @@ const characterGroups = {
     GIRAFFE: { "name": "Giraffe", characters: [characters.GIRAFFE] },
     GORILLA: { "name": "Gorilla", characters: [characters.GORILLA] },
     HEN: { "name": "Hen", characters: [characters.HEN] },
-    PENGUIN: { "name": "Penguin", characters: [characters.PENGUIN] },
+    PENGUIN: { "name": "Penguin", characters: [characters.PENGUIN, characters.PENGUIN_CHRISTMAS, characters.PENGUIN_CHRISTMAS_2] },
     SHARK: { "name": "Shark", characters: [characters.SHARK, characters.SHARK_GRUMPY] },
     CORGI: { "name": "Corgi", characters: [characters.CORGI] },
     COW: { "name": "Cow", characters: [characters.COW] },
@@ -143,6 +150,11 @@ const characterGroups = {
     ASTRONAUT: { "name": "Astronaut", characters: [characters.ASTRONAUT] },
     FLORA: { "name": "Flora", characters: [characters.FLORA] },
     FOX_CHRISTMAS: { "name": "Fox", characters: [characters.FOX_CHRISTMAS] },
+    OWL: { "name": "Owl", characters: [characters.OWL] },
+    BEAVER: { "name": "Beaver", characters: [characters.BEAVER] },
+    WALRUS: { "name": "Walrus", characters: [characters.WALRUS] },
+    ARCTIC_FOX: { "name": "Arctic Fox", characters: [characters.ARCTIC_FOX] },
+    HUSKY: { "name": "Husky", characters: [characters.HUSKY] },
 }
 
 const colors = {
@@ -173,6 +185,8 @@ const multipacks = {
     // 2026
     SPOOKY_PARTY: { name: "Spooky Party", event: events.HALLOWEEN, year: 2026, legamiId: "EP0095" },
     SPOOKY_PARTY_FRIENDS: { name: "Spooky Party", event: events.HALLOWEEN, year: 2026, legamiId: "CPPSET3" },
+    JINGLE_ALL_THE_WAY: { name: "Jingle All The Way", event: events.CHRISTMAS, year: 2026, legamiId: "CPPSET4" },
+    DREAM_PEAKS: { name: "Dream Peaks", event: events.CHRISTMAS, year: 2026, legamiId: "EPSET0018" },
 
     // 2025
     BEARY_IN_LOVE: { name: "Beary in Love", event: events.VALENTINES, year: 2025, legamiId: "CPPSET1" },
@@ -222,6 +236,9 @@ const pens = [
     { id: "F025", character: characters.GHOST_TEDDY, color: colors.BLACK, type: types.FRIENDS, multipack: multipacks.SPOOKY_PARTY_FRIENDS, year: 2026, image: "CPPSET3_3.webp" },
     { id: "F026", character: characters.MUMMY_CAT, color: colors.PURPLE, type: types.FRIENDS, multipack: multipacks.SPOOKY_PARTY_FRIENDS, year: 2026, image: "CPPSET3_4.webp" },
 
+    { id: "F028", character: characters.POLAR_BEAR_CHRISTMAS_2, color: colors.RED, type: types.FRIENDS, multipack: multipacks.JINGLE_ALL_THE_WAY, year: 2026, image: "CPPSET4_3.webp" },
+    { id: "F029", character: characters.PENGUIN_CHRISTMAS_2, color: colors.GREEN, type: types.FRIENDS, multipack: multipacks.JINGLE_ALL_THE_WAY, year: 2026, image: "CPPSET4_4.webp" },
+
     { id: "F016", character: characters.BUNNY_2, color: colors.METALLIC_PINK, type: types.FRIENDS, multipack: multipacks.HOPPY_EASTER_1, image: "friends-bunny2.webp", legamiId: "CPP0028" },
     { id: "F017", character: characters.CHICK, color: colors.METALLIC_PURPLE, type: types.FRIENDS, multipack: multipacks.HOPPY_EASTER_1, image: "friends-chick.webp", legamiId: "CPP0029" },
 
@@ -268,6 +285,12 @@ const pens = [
     { id: "E068", character: characters.PANDA_HALLOWEEN_1, color: colors.RED, type: types.ERASABLE, multipack: multipacks.SPOOKY_PARTY, image: "EP0095_7.webp", notes: "Glow in the dark, in a coffin-shaped blind box" },
     { id: "E069", character: characters.PANDA_HALLOWEEN_2, color: colors.BLACK, type: types.ERASABLE, multipack: multipacks.SPOOKY_PARTY, image: "EP0095_8.webp", notes: "Glow in the dark, in a coffin-shaped blind box. Gold seal; rare." },
     { id: "E070", character: characters.PANDA_HALLOWEEN_3, color: colors.PURPLE, type: types.ERASABLE, multipack: multipacks.SPOOKY_PARTY, image: "EP0095_9.webp", notes: "Glow in the dark, in a coffin-shaped blind box" },
+
+    { id: "E072", character: characters.OWL, color: colors.GREEN, type: types.ERASABLE, multipack: multipacks.DREAM_PEAKS, year: 2026, image: "EPSET0018_3.webp", notes: "Short pen" },
+    { id: "E073", character: characters.BEAVER, color: colors.RED, type: types.ERASABLE, multipack: multipacks.DREAM_PEAKS, year: 2026, image: "EPSET0018_4.webp", notes: "Short pen" },
+    { id: "E074", character: characters.WALRUS, color: colors.BLUE, type: types.ERASABLE, multipack: multipacks.DREAM_PEAKS, year: 2026, image: "EPSET0018_5.webp", notes: "Short pen" },
+    { id: "E075", character: characters.ARCTIC_FOX, color: colors.PINK, type: types.ERASABLE, multipack: multipacks.DREAM_PEAKS, year: 2026, image: "EPSET0018_6.webp", notes: "Short pen" },
+    { id: "E076", character: characters.HUSKY, color: colors.BLACK, type: types.ERASABLE, multipack: multipacks.DREAM_PEAKS, year: 2026, image: "EPSET0018_7.webp", notes: "Short pen" },
 
     { id: "E065", character: characters.GOLDEN_RETRIEVER, color: colors.RED, type: types.ERASABLE, multipack: multipacks.FUREVER_FRIENDS, image: "erasable-retriever.jpg" },
     { id: "E066", character: characters.BULLDOG, color: colors.BLUE, type: types.ERASABLE, multipack: multipacks.FUREVER_FRIENDS, image: "erasable-bulldog.jpg" },
