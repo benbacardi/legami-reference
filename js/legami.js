@@ -211,46 +211,22 @@ const multipacks = {
 }
 
 const pens = [
-    // Lovely Friends
-    { id: "F001", character: characters.PANDA, color: colors.BLACK, type: types.FRIENDS, image: "friends-panda.webp", legamiId: "CPP0016" },
-    { id: "F002", character: characters.BEE, color: colors.BLACK, type: types.FRIENDS, image: "friends-bee.webp", legamiId: "CPP0012" },
-    { id: "F003", character: characters.BUNNY_1, color: colors.PURPLE, type: types.FRIENDS, image: "friends-bunny.webp", legamiId: "CPP0009" },
-    { id: "F004", character: characters.DINO, color: colors.NEON_GREEN, type: types.FRIENDS, image: "friends-dino.webp", legamiId: "CPP0007" },
-    { id: "F005", character: characters.HIPPO, color: colors.BLUE, type: types.FRIENDS, image: "friends-hippo.webp", legamiId: "CPP0015" },
-    { id: "F006", character: characters.KITTY, color: colors.PINK, type: types.FRIENDS, image: "friends-kitty.webp", legamiId: "CPP0002" },
-    { id: "F007", character: characters.KOALA_1, color: colors.GREEN, type: types.FRIENDS, image: "friends-koala.webp", legamiId: "CPP0004" },
-    { id: "F008", character: characters.LADYBUG, color: colors.RED, type: types.FRIENDS, year: 2026, image: "friends-ladybug.webp", legamiId: "CPP0027" },
-    { id: "F009", character: characters.LION_1, color: colors.BLACK, type: types.FRIENDS, year: 2023, image: "friends-lion.webp", legamiId: "CPP0013" },
-    { id: "F010", character: characters.LLAMA, color: colors.SKY_BLUE, type: types.FRIENDS, image: "friends-llama.webp", legamiId: "CPP0010" },
-    { id: "F011", character: characters.MONSTER, color: colors.BLUE, type: types.FRIENDS, image: "friends-monster.webp", legamiId: "CPP0014" },
-    { id: "F012", character: characters.SLOTH, color: colors.BLUE, type: types.FRIENDS, image: "friends-sloth.webp", legamiId: "CPP0005" },
-    { id: "F013", character: characters.TEDDY, color: colors.RED, type: types.FRIENDS, image: "friends-teddy.webp", legamiId: "CPP0003" },
-    { id: "F014", character: characters.TIGER, color: colors.ORANGE, type: types.FRIENDS, image: "friends-tiger.webp", legamiId: "CPP0008" },
-    { id: "F015", character: characters.UNICORN, color: colors.NEON_PINK, type: types.FRIENDS, image: "friends-unicorn.webp", legamiId: "CPP0006" },
-    { id: "F022", character: characters.KITTY_2, color: colors.PINK, type: types.FRIENDS, image: "friends-kitty-meow.png", year: 2026, legamiId: "CPP0017", notes: "Pen barrel fades from pink to purple" },
-    { id: "F023", character: characters.LLAMA, color: colors.SKY_BLUE, type: types.FRIENDS, image: "friends-llama-patterned.webp", year: 2026, legamiId: "CPP0025", notes: "Pen barrel fully patterned" },
-    { id: "F024", character: characters.GORILLA, color: colors.BLACK, type: types.FRIENDS, image: "friends-gorilla.png", year: 2026, legamiId: "CPP0030" },
-    { id: "F027", character: characters.KOALA_3, color: colors.BLUE, type: types.FRIENDS, image: "friends-koala2.webp", year: 2026, legamiId: "CPP0032" },
-
     // 2026
-    { id: "F025", character: characters.GHOST_TEDDY, color: colors.BLACK, type: types.FRIENDS, multipack: multipacks.SPOOKY_PARTY_FRIENDS, year: 2026, image: "CPPSET3_3.webp" },
-    { id: "F026", character: characters.MUMMY_CAT, color: colors.PURPLE, type: types.FRIENDS, multipack: multipacks.SPOOKY_PARTY_FRIENDS, year: 2026, image: "CPPSET3_4.webp" },
+    { id: "E072", character: characters.OWL, color: colors.GREEN, type: types.ERASABLE, multipack: multipacks.DREAM_PEAKS, year: 2026, image: "EPSET0018_3.webp", notes: "Short pen" },
+    { id: "E073", character: characters.BEAVER, color: colors.RED, type: types.ERASABLE, multipack: multipacks.DREAM_PEAKS, year: 2026, image: "EPSET0018_4.webp", notes: "Short pen" },
+    { id: "E074", character: characters.WALRUS, color: colors.BLUE, type: types.ERASABLE, multipack: multipacks.DREAM_PEAKS, year: 2026, image: "EPSET0018_5.webp", notes: "Short pen" },
+    { id: "E075", character: characters.ARCTIC_FOX, color: colors.PINK, type: types.ERASABLE, multipack: multipacks.DREAM_PEAKS, year: 2026, image: "EPSET0018_6.webp", notes: "Short pen" },
+    { id: "E076", character: characters.HUSKY, color: colors.BLACK, type: types.ERASABLE, multipack: multipacks.DREAM_PEAKS, year: 2026, image: "EPSET0018_7.webp", notes: "Short pen" },
 
     { id: "F028", character: characters.POLAR_BEAR_CHRISTMAS_2, color: colors.RED, type: types.FRIENDS, multipack: multipacks.JINGLE_ALL_THE_WAY, year: 2026, image: "CPPSET4_3.webp" },
     { id: "F029", character: characters.PENGUIN_CHRISTMAS_2, color: colors.GREEN, type: types.FRIENDS, multipack: multipacks.JINGLE_ALL_THE_WAY, year: 2026, image: "CPPSET4_4.webp" },
 
-    { id: "F016", character: characters.BUNNY_2, color: colors.METALLIC_PINK, type: types.FRIENDS, multipack: multipacks.HOPPY_EASTER_1, image: "friends-bunny2.webp", legamiId: "CPP0028" },
-    { id: "F017", character: characters.CHICK, color: colors.METALLIC_PURPLE, type: types.FRIENDS, multipack: multipacks.HOPPY_EASTER_1, image: "friends-chick.webp", legamiId: "CPP0029" },
+    { id: "E068", character: characters.PANDA_HALLOWEEN_1, color: colors.RED, type: types.ERASABLE, multipack: multipacks.SPOOKY_PARTY, image: "EP0095_7.webp", notes: "Glow in the dark, in a coffin-shaped blind box" },
+    { id: "E069", character: characters.PANDA_HALLOWEEN_2, color: colors.BLACK, type: types.ERASABLE, multipack: multipacks.SPOOKY_PARTY, image: "EP0095_8.webp", notes: "Glow in the dark, in a coffin-shaped blind box. Gold seal; rare." },
+    { id: "E070", character: characters.PANDA_HALLOWEEN_3, color: colors.PURPLE, type: types.ERASABLE, multipack: multipacks.SPOOKY_PARTY, image: "EP0095_9.webp", notes: "Glow in the dark, in a coffin-shaped blind box" },
+    { id: "F025", character: characters.GHOST_TEDDY, color: colors.BLACK, type: types.FRIENDS, multipack: multipacks.SPOOKY_PARTY_FRIENDS, year: 2026, image: "CPPSET3_3.webp" },
+    { id: "F026", character: characters.MUMMY_CAT, color: colors.PURPLE, type: types.FRIENDS, multipack: multipacks.SPOOKY_PARTY_FRIENDS, year: 2026, image: "CPPSET3_4.webp" },
 
-    // 2025
-    { id: "F018", character: characters.WHITE_BEAR, color: colors.PURPLE, type: types.FRIENDS, multipack: multipacks.BEARY_IN_LOVE, image: "friends-whitebear.webp" },
-    { id: "F019", character: characters.BROWN_BEAR, color: colors.SKY_BLUE, type: types.FRIENDS, multipack: multipacks.BEARY_IN_LOVE, image: "friends-brownbear.webp" },
-    { id: "F020", character: characters.SPIDER, color: colors.NEON_GREEN, type: types.FRIENDS, event: events.HALLOWEEN, year: 2025, image: "friends-spider.webp" },
-
-    // 2024
-    { id: "F021", character: characters.GHOST, color: colors.NEON_GREEN, type: types.FRIENDS, event: events.HALLOWEEN, year: 2024, image: "friends-ghoost.jpg" },
-
-    // Free Hugs
     { id: "H001", character: characters.PANDA, color: colors.BLACK, type: types.HUGS, image: "hugs-panda.webp", year: 2026, legamiId: "HUG0001" },
     { id: "H002", character: characters.KITTY_2, color: colors.BLUE, type: types.HUGS, image: "hugs-kitty.webp", year: 2026, legamiId: "HUG0002" },
     { id: "H003", character: characters.TEDDY, color: colors.RED, type: types.HUGS, image: "hugs-teddy.webp", year: 2026, legamiId: "HUG0003" },
@@ -260,41 +236,22 @@ const pens = [
     { id: "H007", character: characters.GORILLA, color: colors.BLACK, type: types.HUGS, image: "hugs-gorilla.webp", year: 2026, legamiId: "HUG0007" },
     { id: "H008", character: characters.KOALA_3, color: colors.BLUE, type: types.HUGS, image: "hugs-koala.webp", year: 2026, legamiId: "HUG0008" },
 
-    // Erasable
-    { id: "E001", character: characters.PANDA, color: colors.BLACK, type: types.ERASABLE, image: "erasable-panda.webp", legamiId: "EP0001" },
-    { id: "E002", character: characters.BEE, color: colors.BLACK, type: types.ERASABLE, year: 2024, image: "erasable-bee.webp", legamiId: "EP0029" },
-    { id: "E003", character: characters.BUNNY_1, color: colors.PURPLE, type: types.ERASABLE, year: 2022, image: "erasable-bunny.webp", legamiId: "EP0011" },
-    { id: "E004", character: characters.DINO, color: colors.GREEN, type: types.ERASABLE, image: "erasable-dino.webp", legamiId: ["EP0007", "EP0065"] },
-    { id: "E005", character: characters.HIPPO, color: colors.BLUE, type: types.ERASABLE, year: 2024, image: "erasable-hippo.webp", legamiId: ["EP0028", "EP0068"] },
-    { id: "E006", character: characters.KITTY, color: colors.BLACK, type: types.ERASABLE, image: "erasable-kitty.webp", legamiId: "EP0005" },
-    { id: "E007", character: characters.LADYBUG, color: colors.RED, type: types.ERASABLE, year: 2026, image: "erasable-ladybug.webp", legamiId: "EP0074" },
-    { id: "E008", character: characters.LLAMA, color: colors.BLUE, type: types.ERASABLE, image: "erasable-llama.webp", legamiId: "EP0010" },
-    { id: "E009", character: characters.MONSTER, color: colors.BLUE, type: types.ERASABLE, year: 2025, image: "erasable-monster.webp", legamiId: "EP0056" },
-    { id: "E010", character: characters.TEDDY, color: colors.RED, type: types.ERASABLE, year: 2023, image: "erasable-teddy.webp", legamiId: "EP0024" },
-    { id: "E011", character: characters.TIGER, color: colors.ORANGE, type: types.ERASABLE, year: 2025, image: "erasable-tiger.webp", legamiId: "EP0044" },
-    { id: "E012", character: characters.UNICORN, color: colors.PINK, type: types.ERASABLE, year: 2022, image: "erasable-unicorn.webp", legamiId: "EP0013" },
-    { id: "E013", character: characters.BUTTERFLY, color: colors.PINK, type: types.ERASABLE, year: 2025, image: "erasable-butterfly.webp", legamiId: "EP0045" },
-    { id: "E014", character: characters.PENGUIN, color: colors.TURQUOISE, type: types.ERASABLE, year: 2024, image: "erasable-penguin.webp", legamiId: "EP0033" },
-    { id: "E015", character: characters.SHARK, color: colors.BLUE, type: types.ERASABLE, year: 2023, image: "erasable-shark.webp", legamiId: "EP0006" },
-    { id: "E016", character: characters.CORGI, color: colors.BLACK, type: types.ERASABLE, year: 2023, image: "erasable-corgi.png", note: "Exclusive to Ryman", legamiId: "EP0020" },
-    { id: "E068", character: characters.GORILLA, color: colors.BLACK, type: types.ERASABLE, year: 2026, image: "erasable-gorilla.png", legamiId: "EP0085" },
-    { id: "E069", character: characters.HEN, color: colors.RED, type: types.ERASABLE, year: 2026, image: "erasable-hen.png", legamiId: "EP0086" },
     { id: "E071", character: characters.KOALA_3, color: colors.BLUE, type: types.ERASABLE, year: 2026, image: "erasable-koala2.webp", legamiId: "EP0089" },
+    { id: "E069", character: characters.HEN, color: colors.RED, type: types.ERASABLE, year: 2026, image: "erasable-hen.png", legamiId: "EP0086" },
+    { id: "E068", character: characters.GORILLA, color: colors.BLACK, type: types.ERASABLE, year: 2026, image: "erasable-gorilla.png", legamiId: "EP0085" },
+    { id: "E007", character: characters.LADYBUG, color: colors.RED, type: types.ERASABLE, year: 2026, image: "erasable-ladybug.webp", legamiId: "EP0074" },
 
-    // 2026
-    { id: "E068", character: characters.PANDA_HALLOWEEN_1, color: colors.RED, type: types.ERASABLE, multipack: multipacks.SPOOKY_PARTY, image: "EP0095_7.webp", notes: "Glow in the dark, in a coffin-shaped blind box" },
-    { id: "E069", character: characters.PANDA_HALLOWEEN_2, color: colors.BLACK, type: types.ERASABLE, multipack: multipacks.SPOOKY_PARTY, image: "EP0095_8.webp", notes: "Glow in the dark, in a coffin-shaped blind box. Gold seal; rare." },
-    { id: "E070", character: characters.PANDA_HALLOWEEN_3, color: colors.PURPLE, type: types.ERASABLE, multipack: multipacks.SPOOKY_PARTY, image: "EP0095_9.webp", notes: "Glow in the dark, in a coffin-shaped blind box" },
-
-    { id: "E072", character: characters.OWL, color: colors.GREEN, type: types.ERASABLE, multipack: multipacks.DREAM_PEAKS, year: 2026, image: "EPSET0018_3.webp", notes: "Short pen" },
-    { id: "E073", character: characters.BEAVER, color: colors.RED, type: types.ERASABLE, multipack: multipacks.DREAM_PEAKS, year: 2026, image: "EPSET0018_4.webp", notes: "Short pen" },
-    { id: "E074", character: characters.WALRUS, color: colors.BLUE, type: types.ERASABLE, multipack: multipacks.DREAM_PEAKS, year: 2026, image: "EPSET0018_5.webp", notes: "Short pen" },
-    { id: "E075", character: characters.ARCTIC_FOX, color: colors.PINK, type: types.ERASABLE, multipack: multipacks.DREAM_PEAKS, year: 2026, image: "EPSET0018_6.webp", notes: "Short pen" },
-    { id: "E076", character: characters.HUSKY, color: colors.BLACK, type: types.ERASABLE, multipack: multipacks.DREAM_PEAKS, year: 2026, image: "EPSET0018_7.webp", notes: "Short pen" },
+    { id: "F027", character: characters.KOALA_3, color: colors.BLUE, type: types.FRIENDS, image: "friends-koala2.webp", year: 2026, legamiId: "CPP0032" },
+    { id: "F024", character: characters.GORILLA, color: colors.BLACK, type: types.FRIENDS, image: "friends-gorilla.png", year: 2026, legamiId: "CPP0030" },
+    { id: "F023", character: characters.LLAMA, color: colors.SKY_BLUE, type: types.FRIENDS, image: "friends-llama-patterned.webp", year: 2026, legamiId: "CPP0025", notes: "Pen barrel fully patterned" },
+    { id: "F022", character: characters.KITTY_2, color: colors.PINK, type: types.FRIENDS, image: "friends-kitty-meow.png", year: 2026, legamiId: "CPP0017", notes: "Pen barrel fades from pink to purple" },
+    { id: "F008", character: characters.LADYBUG, color: colors.RED, type: types.FRIENDS, year: 2026, image: "friends-ladybug.webp", legamiId: "CPP0027" },
 
     { id: "E065", character: characters.GOLDEN_RETRIEVER, color: colors.RED, type: types.ERASABLE, multipack: multipacks.FUREVER_FRIENDS, image: "erasable-retriever.jpg" },
     { id: "E066", character: characters.BULLDOG, color: colors.BLUE, type: types.ERASABLE, multipack: multipacks.FUREVER_FRIENDS, image: "erasable-bulldog.jpg" },
     { id: "E067", character: characters.POODLE, color: colors.BLACK, type: types.ERASABLE, multipack: multipacks.FUREVER_FRIENDS, image: "erasable-poodle.jpg" },
+    { id: "F016", character: characters.BUNNY_2, color: colors.METALLIC_PINK, type: types.FRIENDS, multipack: multipacks.HOPPY_EASTER_1, image: "friends-bunny2.webp", legamiId: "CPP0028" },
+    { id: "F017", character: characters.CHICK, color: colors.METALLIC_PURPLE, type: types.FRIENDS, multipack: multipacks.HOPPY_EASTER_1, image: "friends-chick.webp", legamiId: "CPP0029" },
     { id: "E017", character: characters.BIRD_YELLOW_BLUE_PURPLE, color: colors.TURQUOISE, type: types.ERASABLE, multipack: multipacks.BETTER_TOGETHER_1, image: "erasable-bird1.webp" },
     { id: "E018", character: characters.BIRD_ORANGE_GREEN_YELLOW, color: colors.ORANGE, type: types.ERASABLE, multipack: multipacks.BETTER_TOGETHER_1, image: "erasable-bird2.jpeg" },
 
@@ -303,15 +260,25 @@ const pens = [
     { id: "E020", character: characters.BALLERINA, color: colors.GREEN, type: types.ERASABLE, multipack: multipacks.NUTCRACKER, image: "erasable-nut2.webp", legamiId: "EP0058" },
     { id: "E021", character: characters.MOUSE, color: colors.RED, type: types.ERASABLE, multipack: multipacks.NUTCRACKER, image: "erasable-nut3.webp", legamiId: "EP0059" },
     { id: "E022", character: characters.BEAR, color: colors.RED, type: types.ERASABLE, event: events.CHRISTMAS, year: 2025, notes: "Advent calendar", image: "erasable-train.avif" },
+
     { id: "E023", character: characters.ZOMBIE, color: colors.BLACK, type: types.ERASABLE, multipack: multipacks.BOO_CREW_1, image: "erasable-zombi.jpg", legamiId: "EP0053" },
     { id: "E024", character: characters.HALLOWEEN_CAT, color: colors.PURPLE, type: types.ERASABLE, multipack: multipacks.BOO_CREW_1, image: "erasable-halloweencat.jpg", legamiId: "EP0054" },
     { id: "E025", character: characters.HALLOWEEN_SKELETON, color: colors.ORANGE, type: types.ERASABLE, multipack: multipacks.BOO_CREW_1, image: "erasable-skeleton.jpg", legamiId: "EP0055" },
+    { id: "F020", character: characters.SPIDER, color: colors.NEON_GREEN, type: types.FRIENDS, event: events.HALLOWEEN, year: 2025, image: "friends-spider.webp" },
+
     { id: "E026", character: characters.COW, color: colors.BLACK, type: types.ERASABLE, multipack: multipacks.FARM, image: "erasable-cow.webp", legamiId: "EP0048" },
     { id: "E027", character: characters.PIGLET, color: colors.PINK, type: types.ERASABLE, multipack: multipacks.FARM, image: "erasable-piglet.webp", legamiId: "EP0049" },
     { id: "E028", character: characters.DONKEY, color: colors.GREEN, type: types.ERASABLE, multipack: multipacks.FARM, image: "erasable-donkey.webp", legamiId: "EP0050" },
     { id: "E029", character: characters.ROOSTER, color: colors.RED, type: types.ERASABLE, multipack: multipacks.FARM, image: "erasable-rooster.webp", legamiId: "EP0051" },
+
+    { id: "E009", character: characters.MONSTER, color: colors.BLUE, type: types.ERASABLE, year: 2025, image: "erasable-monster.webp", legamiId: "EP0056" },
+    { id: "E011", character: characters.TIGER, color: colors.ORANGE, type: types.ERASABLE, year: 2025, image: "erasable-tiger.webp", legamiId: "EP0044" },
+    { id: "E013", character: characters.BUTTERFLY, color: colors.PINK, type: types.ERASABLE, year: 2025, image: "erasable-butterfly.webp", legamiId: "EP0045" },
+
     { id: "E030", character: characters.EASTER_BUNNY, color: colors.PINK, type: types.ERASABLE, multipack: multipacks.HOPPY_EASTER_2, image: "erasable-easterbunny.jpg", legamiId: "EP0046" },
     { id: "E031", character: characters.EASTER_CHICK, color: colors.PURPLE, type: types.ERASABLE, multipack: multipacks.HOPPY_EASTER_2, image: "erasable-easterchick.jpg", legamiId: "EP0047" },
+    { id: "F018", character: characters.WHITE_BEAR, color: colors.PURPLE, type: types.FRIENDS, multipack: multipacks.BEARY_IN_LOVE, image: "friends-whitebear.webp" },
+    { id: "F019", character: characters.BROWN_BEAR, color: colors.SKY_BLUE, type: types.FRIENDS, multipack: multipacks.BEARY_IN_LOVE, image: "friends-brownbear.webp" },
 
     // 2024
     { id: "E032", character: characters.ELF, color: colors.GREEN, type: types.ERASABLE, multipack: multipacks.NAUGHTY_OR_NICE, image: "erasable-elf.webp", legamiId: "EP0039" },
@@ -319,40 +286,77 @@ const pens = [
     { id: "E034", character: characters.SANTA, color: colors.RED, type: types.ERASABLE, multipack: multipacks.NAUGHTY_OR_NICE, image: "erasable-santa.webp", legamiId: "EP0037" },
     { id: "E035", character: characters.SANTA, color: colors.BLACK, type: types.ERASABLE, event: events.CHRISTMAS, year: 2024, notes: "Blue pen, available separately to the Naughty or Nice multipack", image: "erasable-santablue.png", legamiId: "EP0041" },
     { id: "E036", character: characters.YETI, color: colors.BLUE, type: types.ERASABLE, event: events.CHRISTMAS, year: 2024, notes: "Advent calendar", image: "erasable-yeti.png" },
+
     { id: "E037", character: characters.BAT, color: colors.BLACK, type: types.ERASABLE, multipack: multipacks.BOO_CREW_2, image: "erasable-bat.jpg", legamiId: "EP0034" },
     { id: "E038", character: characters.WITCH, color: colors.PURPLE, type: types.ERASABLE, multipack: multipacks.BOO_CREW_2, image: "erasable-witch.jpg", legamiId: "EP0035" },
     { id: "E039", character: characters.VAMPIRE, color: colors.RED, type: types.ERASABLE, multipack: multipacks.BOO_CREW_2, image: "erasable-vampire.jpg", legamiId: "EP0036" },
     { id: "E065", character: characters.BAT2, color: colors.BLACK, type: types.ERASABLE, event: events.HALLOWEEN, year: 2024, notes: "Red slogan, available separately to the Boo Crew multipack", image: "erasable-bat2.png" },
+    { id: "F021", character: characters.GHOST, color: colors.NEON_GREEN, type: types.FRIENDS, event: events.HALLOWEEN, year: 2024, image: "friends-ghoost.jpg" },
+
     { id: "E040", character: characters.TURTLE, color: colors.TURQUOISE, type: types.ERASABLE, multipack: multipacks.UNDER_THE_SEA, image: "erasable-turtle.jpg", legamiId: "EP0030" },
     { id: "E041", character: characters.CLOWN_FISH, color: colors.BLACK, type: types.ERASABLE, multipack: multipacks.UNDER_THE_SEA, image: "erasable-clownfish.jpg", legamiId: "EP0031" },
     { id: "E042", character: characters.SEAHORSE, color: colors.PURPLE, type: types.ERASABLE, multipack: multipacks.UNDER_THE_SEA, image: "erasable-seahorse.jpg", legamiId: "EP0032" },
+
+    { id: "E002", character: characters.BEE, color: colors.BLACK, type: types.ERASABLE, year: 2024, image: "erasable-bee.webp", legamiId: "EP0029" },
+    { id: "E005", character: characters.HIPPO, color: colors.BLUE, type: types.ERASABLE, year: 2024, image: "erasable-hippo.webp", legamiId: ["EP0028", "EP0068"] },
+    { id: "E014", character: characters.PENGUIN, color: colors.TURQUOISE, type: types.ERASABLE, year: 2024, image: "erasable-penguin.webp", legamiId: "EP0033" },
+
     { id: "E043", character: characters.CAT_WITH_WOOL, color: colors.RED, type: types.ERASABLE, multipack: multipacks.BETTER_TOGETHER_2, image: "erasable-tabby.jpg" },
     { id: "E044", character: characters.DOG, color: colors.BLACK, type: types.ERASABLE, multipack: multipacks.BETTER_TOGETHER_2, image: "erasable-dog.jpg" },
+
+    { id: "E057", character: characters.ASTRONAUT, color: colors.BLACK, type: types.ERASABLE, discontinued: 2024, image: "erasable-astronaut.avif", legamiId: "EP0009" },
+    { id: "E058", character: characters.FLORA, color: colors.PINK, type: types.ERASABLE, discontinued: 2024, image: "erasable-flora.jpg", legamiId: "EP0012" },
+    { id: "E059", character: characters.PIG, color: colors.PINK, type: types.ERASABLE, discontinued: 2024, image: "erasable-pig.webp", legamiId: "EP0008" },
+    { id: "E060", character: characters.PANDA, color: colors.BLACK, type: types.ERASABLE, multipack: multipacks.ORIGINAL, individual: true, discontinued: 2024, notes: "Plain white pen", image: "erasable-pandawhite.webp", legamiId: "EP0001" },
+    { id: "E061", character: characters.TEDDY, color: colors.BLUE, type: types.ERASABLE, multipack: multipacks.ORIGINAL, individual: true, discontinued: 2024, notes: "Plain bear, no honey pot", image: "erasable-teddyold.webp", legamiId: "EP0002" },
 
     // 2023
     { id: "E045", character: characters.PENGUIN_CHRISTMAS, color: colors.BLUE, type: types.ERASABLE, multipack: multipacks.CHRISTMAS_2023, image: "erasable-christmaspenguin.jpg", legamiId: "EP0023" },
     { id: "E046", character: characters.FOX_CHRISTMAS, color: colors.GREEN, type: types.ERASABLE, multipack: multipacks.CHRISTMAS_2023, image: "erasable-fox.jpg", legamiId: "EP0021" },
     { id: "E047", character: characters.POLAR_BEAR_CHRISTMAS, color: colors.RED, type: types.ERASABLE, multipack: multipacks.CHRISTMAS_2023, image: "erasable-polarbear.jpg", legamiId: "EP0022" },
+
     { id: "E048", character: characters.FRANKENSTEINS_MONSTER, color: colors.BLACK, type: types.ERASABLE, multipack: multipacks.BOO_CREW_3, image: "erasable-frank.avif" },
     { id: "E049", character: characters.MUMMY, color: colors.PURPLE, type: types.ERASABLE, multipack: multipacks.BOO_CREW_3, image: "erasable-mummy.jpg" },
     { id: "E050", character: characters.PUMPKIN, color: colors.ORANGE, type: types.ERASABLE, multipack: multipacks.BOO_CREW_3, image: "erasable-pumpkin.jpg" },
+
     { id: "E051", character: characters.LION_2, color: colors.ORANGE, type: types.ERASABLE, multipack: multipacks.WILD_SAVANNAH, image: "erasable-lion.jpg", legamiId: "EP0017" },
     { id: "E052", character: characters.ELEPHANT, color: colors.BLUE, type: types.ERASABLE, multipack: multipacks.WILD_SAVANNAH, image: "erasable-elephant.jpg", legamiId: "EP0018" },
     { id: "E053", character: characters.GIRAFFE, color: colors.BLACK, type: types.ERASABLE, multipack: multipacks.WILD_SAVANNAH, individual: true, image: "erasable-giraffe.webp", legamiId: "EP0019" },
+
+    { id: "E010", character: characters.TEDDY, color: colors.RED, type: types.ERASABLE, year: 2023, image: "erasable-teddy.webp", legamiId: "EP0024" },
+    { id: "E015", character: characters.SHARK, color: colors.BLUE, type: types.ERASABLE, year: 2023, image: "erasable-shark.webp", legamiId: "EP0006" },
+    { id: "E016", character: characters.CORGI, color: colors.BLACK, type: types.ERASABLE, year: 2023, image: "erasable-corgi.png", note: "Exclusive to Ryman", legamiId: "EP0020" },
+    { id: "F009", character: characters.LION_1, color: colors.BLACK, type: types.FRIENDS, year: 2023, image: "friends-lion.webp", legamiId: "CPP0013" },
+
+    { id: "E062", character: characters.KOALA_2, color: colors.RED, type: types.ERASABLE, multipack: multipacks.ORIGINAL, individual: true, discontinued: 2023, image: "erasable-koala.webp", legamiId: "EP0003" },
+    { id: "E063", character: characters.SHARK_GRUMPY, color: colors.BLUE, type: types.ERASABLE, discontinued: 2023, image: "erasable-sharkgrumpy.webp", legamiId: "EP0006" },
 
     // 2022
     { id: "E054", character: characters.KOALA_CHRISTMAS, color: colors.BLUE, type: types.ERASABLE, multipack: multipacks.CHRISTMAS_2022, image: "erasable-christmasjoala.jpg" },
     { id: "E055", character: characters.BEAR_CHRISTMAS, color: colors.RED, type: types.ERASABLE, multipack: multipacks.CHRISTMAS_2022, image: "erasable-christmasbear.jpg" },
     { id: "E056", character: characters.PANDA_CHRISTMAS, color: colors.BLACK, type: types.ERASABLE, multipack: multipacks.CHRISTMAS_2022, image: "erasable-christmaspanda.jpg" },
 
-    // Discontinued
-    { id: "E057", character: characters.ASTRONAUT, color: colors.BLACK, type: types.ERASABLE, discontinued: 2024, image: "erasable-astronaut.avif", legamiId: "EP0009" },
-    { id: "E058", character: characters.FLORA, color: colors.PINK, type: types.ERASABLE, discontinued: 2024, image: "erasable-flora.jpg", legamiId: "EP0012" },
-    { id: "E059", character: characters.PIG, color: colors.PINK, type: types.ERASABLE, discontinued: 2024, image: "erasable-pig.webp", legamiId: "EP0008" },
-    { id: "E060", character: characters.PANDA, color: colors.BLACK, type: types.ERASABLE, multipack: multipacks.ORIGINAL, individual: true, discontinued: 2024, notes: "Plain white pen", image: "erasable-pandawhite.webp", legamiId: "EP0001" },
-    { id: "E061", character: characters.TEDDY, color: colors.BLUE, type: types.ERASABLE, multipack: multipacks.ORIGINAL, individual: true, discontinued: 2024, notes: "Plain bear, no honey pot", image: "erasable-teddyold.webp", legamiId: "EP0002" },
-    { id: "E062", character: characters.KOALA_2, color: colors.RED, type: types.ERASABLE, multipack: multipacks.ORIGINAL, individual: true, discontinued: 2023, image: "erasable-koala.webp", legamiId: "EP0003" },
-    { id: "E063", character: characters.SHARK_GRUMPY, color: colors.BLUE, type: types.ERASABLE, discontinued: 2023, image: "erasable-sharkgrumpy.webp", legamiId: "EP0006" },
+    { id: "E003", character: characters.BUNNY_1, color: colors.PURPLE, type: types.ERASABLE, year: 2022, image: "erasable-bunny.webp", legamiId: "EP0011" },
+    { id: "E012", character: characters.UNICORN, color: colors.PINK, type: types.ERASABLE, year: 2022, image: "erasable-unicorn.webp", legamiId: "EP0013" },
     { id: "E064", character: characters.UNICORN, color: colors.BLACK, type: types.ERASABLE, discontinued: 2022, notes: "Plain white pen", image: "erasable-unicornwhite.jpg", legamiId: "EP0004" },
 
+    // Classic / Original
+    { id: "E001", character: characters.PANDA, color: colors.BLACK, type: types.ERASABLE, image: "erasable-panda.webp", legamiId: "EP0001" },
+    { id: "E004", character: characters.DINO, color: colors.GREEN, type: types.ERASABLE, image: "erasable-dino.webp", legamiId: ["EP0007", "EP0065"] },
+    { id: "E006", character: characters.KITTY, color: colors.BLACK, type: types.ERASABLE, image: "erasable-kitty.webp", legamiId: "EP0005" },
+    { id: "E008", character: characters.LLAMA, color: colors.BLUE, type: types.ERASABLE, image: "erasable-llama.webp", legamiId: "EP0010" },
+
+    { id: "F001", character: characters.PANDA, color: colors.BLACK, type: types.FRIENDS, image: "friends-panda.webp", legamiId: "CPP0016" },
+    { id: "F002", character: characters.BEE, color: colors.BLACK, type: types.FRIENDS, image: "friends-bee.webp", legamiId: "CPP0012" },
+    { id: "F003", character: characters.BUNNY_1, color: colors.PURPLE, type: types.FRIENDS, image: "friends-bunny.webp", legamiId: "CPP0009" },
+    { id: "F004", character: characters.DINO, color: colors.NEON_GREEN, type: types.FRIENDS, image: "friends-dino.webp", legamiId: "CPP0007" },
+    { id: "F005", character: characters.HIPPO, color: colors.BLUE, type: types.FRIENDS, image: "friends-hippo.webp", legamiId: "CPP0015" },
+    { id: "F006", character: characters.KITTY, color: colors.PINK, type: types.FRIENDS, image: "friends-kitty.webp", legamiId: "CPP0002" },
+    { id: "F007", character: characters.KOALA_1, color: colors.GREEN, type: types.FRIENDS, image: "friends-koala.webp", legamiId: "CPP0004" },
+    { id: "F010", character: characters.LLAMA, color: colors.SKY_BLUE, type: types.FRIENDS, image: "friends-llama.webp", legamiId: "CPP0010" },
+    { id: "F011", character: characters.MONSTER, color: colors.BLUE, type: types.FRIENDS, image: "friends-monster.webp", legamiId: "CPP0014" },
+    { id: "F012", character: characters.SLOTH, color: colors.BLUE, type: types.FRIENDS, image: "friends-sloth.webp", legamiId: "CPP0005" },
+    { id: "F013", character: characters.TEDDY, color: colors.RED, type: types.FRIENDS, image: "friends-teddy.webp", legamiId: "CPP0003" },
+    { id: "F014", character: characters.TIGER, color: colors.ORANGE, type: types.FRIENDS, image: "friends-tiger.webp", legamiId: "CPP0008" },
+    { id: "F015", character: characters.UNICORN, color: colors.NEON_PINK, type: types.FRIENDS, image: "friends-unicorn.webp", legamiId: "CPP0006" },
 ]
