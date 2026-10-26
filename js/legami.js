@@ -183,31 +183,31 @@ const events = {
 const multipacks = {
 
     // 2026
-    SPOOKY_PARTY: { name: "Spooky Party", event: events.HALLOWEEN, year: 2026, legamiId: "EP0095" },
-    SPOOKY_PARTY_FRIENDS: { name: "Spooky Party", event: events.HALLOWEEN, year: 2026, legamiId: "CPPSET3" },
+    SPOOKY_PARTY: { name: "Spooky Party", event: events.HALLOWEEN, year: 2026, legamiId: "EP0095", image: "EP0095_1.webp" },
+    SPOOKY_PARTY_FRIENDS: { name: "Spooky Party", event: events.HALLOWEEN, year: 2026, legamiId: "CPPSET3", image: "CPPSET3_5.webp" },
     JINGLE_ALL_THE_WAY: { name: "Jingle All The Way", event: events.CHRISTMAS, year: 2026, legamiId: "CPPSET4", image: "CPPSET4_5.webp" },
     DREAM_PEAKS: { name: "Dream Peaks", event: events.CHRISTMAS, year: 2026, legamiId: "EPSET0018", image: "EPSET0018_13.webp" },
 
     // 2025
-    BEARY_IN_LOVE: { name: "Beary in Love", event: events.VALENTINES, year: 2025, legamiId: "CPPSET1" },
-    HOPPY_EASTER_1: { name: "Hoppy Easter", event: events.EASTER, year: 2026, legamiId: "CPPSET2" },
+    BEARY_IN_LOVE: { name: "Beary in Love", event: events.VALENTINES, year: 2025, legamiId: "CPPSET1", image: "CPPSET1.webp" },
+    HOPPY_EASTER_1: { name: "Hoppy Easter", event: events.EASTER, year: 2026, legamiId: "CPPSET2", image: "CPPSET2.webp" },
 
     ORIGINAL: { name: "Original Collection", event: null, year: 2023, discontinued: 2024, legamiId: "EPSET0001" },
     CHRISTMAS_2022: { name: "Christmas 2022", event: events.CHRISTMAS, year: 2022, legamiId: "EPSET0002" },
-    WILD_SAVANNAH: { name: "Wild Savannah", event: null, year: 2023, discontinued: 2025, legamiId: "EPSET0003" },
-    CHRISTMAS_2023: { name: "It's Christmas Time", event: events.CHRISTMAS, year: 2023, legamiId: "EPSET0004" },
-    BOO_CREW_3: { name: "The Boo Crew", event: events.HALLOWEEN, year: 2023, legamiId: "EPSET0005" },
-    BETTER_TOGETHER_2: { name: "Better Together", event: events.VALENTINES, year: 2024, legamiId: "EPSET0006" },
-    UNDER_THE_SEA: { name: "Under the Sea", event: null, year: 2024, discontinued: 2025, legamiId: "EPSET0007" },
-    BOO_CREW_2: { name: "The Boo Crew", event: events.HALLOWEEN, year: 2024, legamiId: "EPSET0008" },
-    NAUGHTY_OR_NICE: { name: "Naughty or Nice", event: events.CHRISTMAS, year: 2024, legamiId: "EPSET0009" },
-    HOPPY_EASTER_2: { name: "Hoppy Easter", event: events.EASTER, year: 2025, legamiId: "EPSET0010" },
-    FARM: { name: "Farm Sweet Farm", event: null, year: 2025, legamiId: ["EPSET0011", "EPSET0016"] },
+    WILD_SAVANNAH: { name: "Wild Savannah", event: null, year: 2023, discontinued: 2025, legamiId: "EPSET0003", image: "EPSET0003.webp" },
+    CHRISTMAS_2023: { name: "It's Christmas Time", event: events.CHRISTMAS, year: 2023, legamiId: "EPSET0004", image: "EPSET0004.webp" },
+    BOO_CREW_3: { name: "The Boo Crew", event: events.HALLOWEEN, year: 2023, legamiId: "EPSET0005", image: "EPSET0005.webp" },
+    BETTER_TOGETHER_2: { name: "Better Together", event: events.VALENTINES, year: 2024, legamiId: "EPSET0006", image: "EPSET0006.webp" },
+    UNDER_THE_SEA: { name: "Under the Sea", event: null, year: 2024, discontinued: 2025, legamiId: "EPSET0007", image: "EPSET0007.webp" },
+    BOO_CREW_2: { name: "The Boo Crew", event: events.HALLOWEEN, year: 2024, legamiId: "EPSET0008", image: "EPSET0008.webp" },
+    NAUGHTY_OR_NICE: { name: "Naughty or Nice", event: events.CHRISTMAS, year: 2024, legamiId: "EPSET0009", image: "EPSET0009.webp" },
+    HOPPY_EASTER_2: { name: "Hoppy Easter", event: events.EASTER, year: 2025, legamiId: "EPSET0010", image: "EPSET0010.webp" },
+    FARM: { name: "Farm Sweet Farm", event: null, year: 2025, legamiId: ["EPSET0011", "EPSET0016"], image: "EPSET0016_11.webp" },
 
-    BOO_CREW_1: { name: "The Boo Crew", event: events.HALLOWEEN, year: 2025, legamiId: "EPSET0013" },
-    NUTCRACKER: { name: "The Nutcracker", event: events.CHRISTMAS, year: 2025, legamiId: "EPSET0014" },
-    BETTER_TOGETHER_1: { name: "Better Together", event: events.VALENTINES, year: 2026, legamiId: "EPSET0015" },
-    FUREVER_FRIENDS: { name: "Fur-ever Friends", event: null, year: 2026, legamiId: "EPSET0017" },
+    BOO_CREW_1: { name: "The Boo Crew", event: events.HALLOWEEN, year: 2025, legamiId: "EPSET0013", image: "EPSET0013.webp" },
+    NUTCRACKER: { name: "The Nutcracker", event: events.CHRISTMAS, year: 2025, legamiId: "EPSET0014", image: "EPSET0014.webp" },
+    BETTER_TOGETHER_1: { name: "Better Together", event: events.VALENTINES, year: 2026, legamiId: "EPSET0015", image: "EPSET0015.webp" },
+    FUREVER_FRIENDS: { name: "Fur-ever Friends", event: null, year: 2026, legamiId: "EPSET0017", image: "EPSET0017_10.webp" },
 }
 
 const pens = [
