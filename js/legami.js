@@ -94,6 +94,7 @@ const characters = {
     MUMMY_CAT: { name: "Mummy Cat", statement: "Nine lives later...", image: "mummycat.png" },
     GHOST_TEDDY: { name: "Ghost Teddy", statement: "Guess who's back?", image: "ghostteddy.png" },
     KOALA_3: { name: "Koala", statement: "Sleeping La Vida Loca", image: "koala.jpg" },
+    SNOWMAN: { name: "Snowman", statement: "Let Magic Warm Your Heart", image: "snowman.jpg" },
 }
 
 const characterGroups = {
@@ -155,6 +156,7 @@ const characterGroups = {
     WALRUS: { "name": "Walrus", characters: [characters.WALRUS] },
     ARCTIC_FOX: { "name": "Arctic Fox", characters: [characters.ARCTIC_FOX] },
     HUSKY: { "name": "Husky", characters: [characters.HUSKY] },
+    SNOWMAN: { "name": "Snowman", characters: [characters.SNOWMAN] },
 }
 
 const colors = {
@@ -212,6 +214,9 @@ const multipacks = {
 
 const pens = [
     // 2026
+
+    { id: "E077", character: characters.SNOWMAN, color: colors.BLUE, type: types.ERASABLE, event: events.CHRISTMAS, year: 2026, notes: "Mystery pen in advent calendar" },
+
     { id: "E072", character: characters.OWL, color: colors.GREEN, type: types.ERASABLE, multipack: multipacks.DREAM_PEAKS, year: 2026, image: "EPSET0018_3.webp", notes: "Short pen" },
     { id: "E073", character: characters.BEAVER, color: colors.RED, type: types.ERASABLE, multipack: multipacks.DREAM_PEAKS, year: 2026, image: "EPSET0018_4.webp", notes: "Short pen" },
     { id: "E074", character: characters.WALRUS, color: colors.BLUE, type: types.ERASABLE, multipack: multipacks.DREAM_PEAKS, year: 2026, image: "EPSET0018_5.webp", notes: "Short pen" },
@@ -257,7 +262,7 @@ const pens = [
 
     // 2025
     { id: "E015", character: characters.SHARK, color: colors.BLUE, type: types.ERASABLE, year: 2025, image: "erasable-shark.webp", legamiId: "EP0006" },
-    
+
     { id: "E019", character: characters.NUTCRACKER, color: colors.BLUE, type: types.ERASABLE, multipack: multipacks.NUTCRACKER, image: "erasable-nut1.webp", legamiId: "EP0057" },
     { id: "E020", character: characters.BALLERINA, color: colors.GREEN, type: types.ERASABLE, multipack: multipacks.NUTCRACKER, image: "erasable-nut2.webp", legamiId: "EP0058" },
     { id: "E021", character: characters.MOUSE, color: colors.RED, type: types.ERASABLE, multipack: multipacks.NUTCRACKER, image: "erasable-nut3.webp", legamiId: "EP0059" },
@@ -340,7 +345,7 @@ const pens = [
     { id: "E003", character: characters.BUNNY_1, color: colors.PURPLE, type: types.ERASABLE, year: 2022, image: "erasable-bunny.webp", legamiId: "EP0011" },
     { id: "E012", character: characters.UNICORN, color: colors.PINK, type: types.ERASABLE, year: 2022, image: "erasable-unicorn.webp", legamiId: "EP0013" },
     { id: "E064", character: characters.UNICORN, color: colors.BLACK, type: types.ERASABLE, discontinued: 2022, notes: "Plain white pen", image: "erasable-unicornwhite.jpg", legamiId: "EP0004" },
-    
+
     { id: "E004", character: characters.DINO, color: colors.GREEN, type: types.ERASABLE, year: 2022, image: "erasable-dino.webp", legamiId: ["EP0007", "EP0065"] },
 
     // Classic / Original
