@@ -215,7 +215,7 @@ const multipacks = {
 const pens = [
     // 2026
 
-    { id: "E077", character: characters.SNOWMAN, color: colors.BLUE, type: types.ERASABLE, event: events.CHRISTMAS, year: 2026, notes: "Mystery pen in advent calendar" },
+    { id: "E077", character: characters.SNOWMAN, color: colors.BLUE, type: types.ERASABLE, event: events.CHRISTMAS, year: 2026, image: "snowman.png", notes: "Mystery pen in advent calendar" },
 
     { id: "E072", character: characters.OWL, color: colors.GREEN, type: types.ERASABLE, multipack: multipacks.DREAM_PEAKS, year: 2026, image: "EPSET0018_3.webp", notes: "Short pen" },
     { id: "E073", character: characters.BEAVER, color: colors.RED, type: types.ERASABLE, multipack: multipacks.DREAM_PEAKS, year: 2026, image: "EPSET0018_4.webp", notes: "Short pen" },
